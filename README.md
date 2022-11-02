@@ -1,1 +1,1 @@
-# weekdays-php-4-p-m
+# weekdays php 4 p m
