@@ -5,7 +5,7 @@
  * 1. if
  * 2. else
  * 3. elseif
- * 4. alternative syntax fot control structure
+ * 4. alternative syntax for control structure
  * 5. while
  * 6. do-while
  * 7. for
@@ -20,6 +20,115 @@
  * 17. require_once
  * 18. include_once
  */
+
+// value 10
+// ui1 
+
+// value 11
+// ui2
+
+//  if else / elseif
+
+// $value = 1;
+
+// if ($value > 10) 
+//     echo "value is $value asfasfdf";
+// elseif ($value == 10)
+//     echo "value is $value asfasfdf";
+// else 
+//     echo " asfasfdf";
+
+
+// check the person can vote or not 
+
+// $age = 10;
+
+// if($age >= 18) {
+//     echo "person can vote";
+// }else {
+//     echo "person can not vote";
+// }
+
+//  switch
+
+// $value = 11;
+
+// if(true) : 
+//     echo "value is asfasfdf";
+// endif;
+
+// switch ($value) {
+//     case 10:
+//         echo "value is 10";
+//         echo "<br>";
+//         break;
+
+//     case 11:
+//         echo "value is 10";
+//         echo "<br>";
+//         break;
+
+//     case 12:
+//         echo "value is 10";
+//         echo "<br>";
+//         break;
+
+//     default:
+//         echo "default";
+// }
+
+
+//  for
+
+$array = [10,20,30,40,50];
+
+// echo $array[0];
+
+// i -> 1
+// total - 5
+
+// echo sizeof($array);
+
+// echo count($array);
+
+// for ($i=0; $i < count($array)  ; $i++) { 
+//     echo $array[$i] . "<br>";
+// }
+
+// for ($i=0; $i < 10 ; $i++) { 
+//     echo $i. "<br>";
+// }
+
+foreach($array as $key => $value) {
+    echo $key." " .$value ."<br>";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //  if
 
@@ -95,3 +204,26 @@
  * As the name suggests, the file will be included just once.
  * 
  */
+
+ $value = true;
+
+ ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <h1>heading</h1> -->
+
+    <?php // if($value): ?>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis deserunt natus possimus dicta maiores, porro in optio doloremque error, dolorem dolor, voluptate consectetur sint. Enim ullam nemo maiores deleniti!</p> -->
+    <?php // endif; ?>
+</body>
+</html>
