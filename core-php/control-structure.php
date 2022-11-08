@@ -80,7 +80,7 @@
 
 //  for
 
-$array = [10,20,30,40,50];
+// $array = [10,20,30,40,50];
 
 // echo $array[0];
 
@@ -99,9 +99,94 @@ $array = [10,20,30,40,50];
 //     echo $i. "<br>";
 // }
 
-foreach($array as $key => $value) {
-    echo $key." " .$value ."<br>";
-}
+// foreach($array as $key => $value) {
+//     echo $key." " .$value ."<br>";
+// }
+
+// while
+
+// $number = 10;
+
+// while ($number > 0) {
+//     echo $number. "<br>";
+
+//     $number--;
+// }
+
+// $number = 123;
+
+// $temp = $number;
+// $count = 0;
+
+// while ($temp != 0) {
+
+//     $count++;
+
+//     $temp = (int) ($temp / 10);
+// }
+
+// echo $count;
+
+// $number = 21212121;
+
+
+// $count = 0;
+
+// for ( $temp = $number ; $temp != 0 ;  $temp = (int) ($temp / 10)) { 
+
+//     $count++;
+   
+// }
+
+// echo $count;
+
+
+// do while
+
+// $number = 11;
+
+// do {
+//     echo $number. "<br>";
+//     $number--;
+
+// } while ($number > 10);
+
+//  break / continue / return
+
+// $array = [10,"",30,40,50];
+
+// for ($i=0; $i < count($array); $i++) { 
+    
+    // if($array[$i] == 20) {
+    //     return;
+    // }
+   
+
+    // echo $array[$i]. "<br>";
+
+    // if($array[$i] == 10) {
+    //     break;
+    // }
+
+    // if($array[$i] == "") {
+    //     continue;
+    // }
+
+    // echo $array[$i]. "<br>";
+// }
+
+// match 
+
+// $value = 20;
+
+// $value = match($value) {
+//     10 => "10",
+//     20 => "20",
+//     30 => "10"
+// };
+
+// var_dump($value);
+
 
 
 
