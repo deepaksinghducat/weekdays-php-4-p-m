@@ -1,0 +1,2139 @@
+Basic
+
+1. Write a PHP program to compute the sum of the two given integer values. If the two values are the same, then returns triple their sum.
+Sample Input
+1, 2
+3, 2
+2, 2
+Sample Output:
+3
+5
+12
+
+
+2. Write a PHP program to get the absolute difference between n and 51. If n is greater than 51 return triple the absolute difference.
+Sample Input:
+53
+30
+51
+Sample Output:
+6
+21
+0
+
+3. Write a PHP program to check two given integers, and return true if one of them is 30 or if their sum is 30.
+Sample Input:
+30, 0
+25, 5
+20, 30
+20, 25
+Sample Output:
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+
+4. Write a PHP program to check a given integer and return true if it is within 10 of 100 or 200.
+Sample Input:
+103
+90
+89
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+
+
+5. Write a PHP program to create a new string where 'if' is added to the front of a given string. If the string already begins with 'if', return the string unchanged.
+Sample Input:
+"if else"
+"else"
+"if"
+Sample Output:
+if else
+if else
+if
+
+6. Write a PHP program to remove the character in a given position of a given string. The given position will be in the range 0..string length -1 inclusive.
+Sample Input:
+"Python", 1
+"Python", o
+"Python", 4
+Sample Output:
+Pthon
+ython
+Pythn
+
+
+
+7. Write a PHP program to exchange the first and last characters in a given string and return the new string.
+Sample Input:
+"abcd"
+"a"
+"xy"
+Sample output:
+dbca
+a
+yx
+
+
+
+8. Write a PHP program to create a new string which is 4 copies of the 2 front characters of a given string. If the given string length is less than 2 return the original string.
+Sample Input:
+"C Sharp"
+"JS"
+"a"
+Sample Output:
+C C C C
+JSJSJSJS
+a
+
+
+
+9. Write a PHP program to create a new string with the last char added at the front and back of a given string of length 1 or more.
+Sample Input:
+"Red"
+"Green"
+"1"
+Sample Output:
+dRedd
+nGreenn
+111
+
+10. Write a PHP program to check if a given positive number is a multiple of 3 or a multiple of 7.
+Sample Inpu
+
+t
+3
+14
+12
+37
+Sample Output:
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+
+11. Write a PHP program to create a new string taking the first 3 characters of a given string and return the string with the 3 characters added at both the front and back. If the given string length is less than 3, use whatever characters are there.
+Sample Input:
+"Python"
+"JS"
+"Code"
+Sample Output:
+PytPythonPyt
+JSJSJS
+CodCodeCod
+
+12. Write a PHP program to check if a given string starts with 'C#' or not.
+Sample Input:
+"PHP"
+"C#"
+"C++"
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+13. Write a PHP program to check if one given temperatures is less than 0 and the other is greater than 100.
+Sample Input:
+120, -1
+-1, 120
+2, 120
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+14. Write a PHP program to check two given integers whether either of them is in the range 100..200 inclusive.
+Sample Input:
+100, 199
+250, 300
+105, 190
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+15. Write a PHP program to check whether three given integer values are in the range 20..50 inclusive. Return true if 1 or more of them are in the said range otherwise false.
+Sample Input:
+11, 20,
+
+ 12
+30, 30, 17
+25, 35, 50
+15, 12, 8
+Sample Output:
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+
+16. Write a PHP program to check whether two given integer values are in the range 20..50 inclusive. Return true if 1 or other is in the said range otherwise false.
+Sample Input:
+20, 84
+14, 50
+11, 45
+25, 40
+Sample Output:
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+
+17. Write a PHP program to check if a string 'yt' appears at index 1 in a given string. If it appears return a string without 'yt' otherwise return the original string.
+Sample Input:
+"Python"
+"ytade"
+"jsues"
+Sample Output:
+Phon
+ytade
+jsues
+
+18. Write a PHP program to check the largest number among three given integers.
+Sample Input
+
+:
+1,2,3
+1,3,2
+1,1,1
+1,2,2
+Sample Output:
+3
+3
+1
+2
+
+
+19. Write a PHP program to check which number nearest to the value 100 among two given integers. Return 0 if the two numbers are equal.
+Sample Input:
+78, 95
+95, 95
+99, 70
+Sample Output:
+95
+0
+99
+
+20. Write a PHP program to check whether two given integers are in the range 40..50 inclusive, or they are both in the range 50..60 inclusive.
+Sample Input:
+78, 95
+25, 35
+40, 50
+55, 60
+Sample Output:
+bool(false)
+bool(false)
+bool(true)
+bool(true)
+
+21. Write a PHP program to find the larger value from two positive integer values that is in the range 20..30 inclusive, or return 0 if neither is in that range.
+Sample Input:
+78, 95
+20, 30
+21, 25
+28, 28
+Sample Output:
+0
+30
+25
+28
+
+22. Write a PHP program to check if a given string contains between 2 and 4 'z' character.
+Sample Input:
+"frizz"
+"zane"
+"Zazz"
+"false"
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+bool(false)
+
+23. Write a PHP program to check if two given non-negative integers have the same last digit.
+Sample Input:
+123,456
+12, 512
+7, 87
+12, 45
+Sample Output:
+bool(false)
+bool(true)
+bool(true)
+bool(false)
+
+24. Write a PHP program to convert the last 3 characters of a given string in upper case. If the length of the string has less than 3 then uppercase all the characters.
+Sample Input:
+"Python"
+"Javascript"
+"js"
+"PHP"
+Sample Output:
+PytHON
+JavascrIPT
+JS
+PHP
+
+
+
+25. Write a PHP program to create a new string which is n (non-negative integer) copies of a given string.
+Sample Input:
+"JS", 2
+"JS", 3
+"JS", 1
+Sample Output:
+JSJS
+JSJSJS
+JS
+
+26. Write a PHP program to create a new string which is n (non-negative integer) copies of the the first 3 characters of a given string. If the length of the given string is less than 3 then return n copies of the string.
+Sample Input:
+"Python", 2
+"Python", 3
+"JS", 3
+Sample Output:
+PytPyt
+PytPytPyt
+JSJSJS
+
+27. Write a PHP program to count the string "aa" in a given string and assume "aaa" contains two "aa".
+Sample Input:
+"bbaaccaag"
+"jjkiaaasew"
+"JSaaakoiaa"
+Sample Output:
+2
+2
+3
+
+28. Write a PHP program to check if the first appearance of "a" in a given string is immediately followed by another "a".
+Sample Input:
+"caabb"
+"babaaba"
+"aaaaa"
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+
+29. Write a PHP program to create a new string made of every other character starting with the first from a given string.
+Sample Input:
+"Python"
+"PHP"
+"JS"
+Sample Output:
+Pto
+PP
+J
+
+30. Write a PHP program to create a string like "aababcabcd" from a given string "abcd".
+Sample Input:
+"abcd"
+"abc"
+"a"
+Sample Output:
+aababcabcd
+aababc
+a
+
+31. Write a PHP program to count a substring of length 2 appears in a given string and also as the last 2 characters of the string. Do not count the end substring.
+Sample Input
+
+:
+"abcdsab"
+"abcdabab"
+"abcabdabab"
+"abcabd"
+Sample Output:
+1
+2
+3
+0
+
+32. Write a PHP program to check a specified number is present in a given array of integers.
+Sample Input:
+{1,2,9,3}, 3
+{1,2,2,3}, 2
+{1,2,2,3}, 9
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+33. Write a PHP program to check if one of the first 4 elements in an array of integers is equal to a given element.
+Sample Input:
+{1,2,9,3}, 3
+{1,2,3,4,5,6}, 2
+{1,2,2,3}, 9
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+34. Write a PHP program to check whether the sequence of numbers 1, 2, 3 appears in a given array of integers somewhere.
+Sample Input:
+{1,1,2,3,1}
+{1,1,2,4,1}
+{1,1,2,1,2,3}
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+35. Write a PHP program to compare two given strings and return the number of the positions where they contain the same length 2 substring.
+Sample Input:
+"abcdefgh", "abijsklm"
+"abcde", "osuefrcd"
+"pqrstuvwx", "pqkdiewx"
+Sample Output:
+1
+1
+2
+
+36. Write a PHP program to create a new string of the characters at indexes 0,1,4,5,8,9 ... from a given string.
+Sample Input:
+"Python"
+"JavaScript"
+"HTML"
+Sample Output:
+Pyon
+JaScpt
+HT
+
+
+37. Write a PHP program to count the number of two 5's are next to each other in an array of integers. Also count the situation where the second 5 is actually a 6.
+Sample Input:
+{ 5, 5, 2 }
+{ 5, 5, 2, 5, 5 }
+{ 5, 6, 2, 9}
+Sample Output:
+1
+2
+1
+
+38. Write a PHP program to check if a triple is presents in an array of integers or not. If a value appears three times in a row in an array it is called a triple.
+Sample Input:
+{ 1, 1, 2, 2, 1 }
+{ 1, 1, 2, 1, 2, 3 }
+{ 1, 1, 1, 2, 2, 2, 1 }
+Sample Output:
+bool(false)
+bool(false)
+bool(true)
+
+39. Write a PHP program to compute the sum of the two given integers. If the sum is in the range 10..20 inclusive return 30.
+Sample Input:
+
+
+12, 17
+2, 17
+22, 17
+20, 0
+Sample Output:
+29
+30
+39
+30
+
+40. Write a PHP program that accept two integers and return true if either one is 5 or their sum or difference is 5.
+Sample Input:
+5, 4
+4, 3
+1, 4
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+41. Write a PHP program to test if a given non-negative number is a multiple of 13 or it is one more than a multiple of 13.
+Sample Input:
+13
+14
+27
+41
+Sample Output:
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+
+42. Write a PHP program to check if a given non-negative given number is a multiple of 3 or 7, but not both.
+Sample Input:
+3
+7
+21
+Sample Output:
+int(1)
+int(1)
+int(0)
+
+43. Write a PHP program to check if a given number is within 2 of a multiple of 10.
+Sample Input:
+3
+7
+8
+21
+Sample Output:
+bool(false)
+bool(false)
+bool(true)
+bool(true)
+
+44. Write a PHP program to compute the sum of the two given integers. If one of the given integer value is in the range 10..20 inclusive return 18.
+Sample Input:
+3, 7
+10, 11
+10, 20
+21, 220
+Sample Output:
+10
+18
+18
+241
+
+45. Write a PHP program to check whether a given string starts with "F" or ends with "B". If the string starts with "F" return "Fizz" and return "Buzz" if it ends with "B" If the string starts with "F" and ends with "B" return "FizzBuzz". In other cases return the original string.
+Sample Input:
+"FizzBuzz"
+"Fizz"
+"Buzz"
+"Founder"
+Sample Output:
+Fizz
+Fizz
+Buzz
+Fizz
+
+46. Write a PHP program to check if it is possible to add two integers to get the third integer from three given integers.
+Sample Input:
+1, 2, 3
+4, 5, 6
+-1, 1, 0
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+47. Write a PHP program to check if y is greater than x, and z is greater than y from three given integers x,y,z.
+Sample Input:
+1, 2, 3
+4, 5, 6
+-1, 1, 0
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+48. Write a PHP program to check if three given numbers are in strict increasing order, such as 4 7 15, or 45, 56, 67, but not 4 ,5, 8 or 6, 6, 8.However,if a fourth parameter is true, equality is allowed, such as 6, 6, 8 or 7, 7, 7.
+Sample Input:
+1, 2, 3, false
+1, 2, 3, true
+10, 2, 30, false
+10, 10, 30, true
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+bool(true)
+
+49. Write a PHP program to check if two or more non-negative given integers have the same rightmost digit.
+Sample Input:
+11, 21, 31
+11, 22, 31
+11, 22, 33
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+50. Write a PHP program to check three given integers and return true if one of them is 20 or more less than one of the others.
+Sample Input:
+11, 21, 31
+11, 22, 31
+10, 20, 15
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+51. Write a PHP program to find the larger from two given integers. However if the two integers have the same remainder when divided by 7, then the return the smaller integer. If the two integers are the same, return 0.
+Sample Input:
+11, 21
+11, 20
+10, 10
+Sample Output:
+21
+20
+0
+
+52. Write a PHP program to check two given integers, each in the range 10..99. Return true if a digit appears in both numbers, such as the 3 in 13 and 33.
+Sample Input:
+11, 21
+11, 20
+10, 10
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+53. Write a PHP program to compute the sum of two given non-negative integers x and y as long as the sum has the same number of digits as x. If the sum has more digits than x then return x without y.
+Sample Input:
+4, 5
+7, 4
+10, 10
+Sample Output:
+9
+7
+20
+
+54. Write a PHP program to compute the sum of three given integers. If the two values are same return the third value.
+Sample Input:
+4, 5, 7
+7, 4, 12
+10, 10, 12
+12, 12, 18
+Sample Output:
+16
+23
+12
+18
+
+55. Write a PHP program to compute the sum of the three integers. If one of the values is 13 then do not count it and its right towards the sum.
+Sample Input:
+4, 5, 7
+7, 4, 12
+10, 13, 12
+13, 12, 18
+Sample Output:
+16
+23
+10
+0
+
+56. Write a PHP program to compute the sum of the three given integers. However, if any of the values is in the range 10..20 inclusive then that value counts as 0, except 13 and 17.
+Sample Input:
+4, 5, 7
+7, 4, 12
+10, 13, 12
+17, 12, 18
+Sample Output:
+16
+11
+13
+17
+
+57. Write a PHP program to check two given integers and return the value whichever value is nearest to 13 without going over. Return 0 if both numbers go over.
+Sample Input:
+4, 5
+7, 12
+10, 13
+17, 33
+Sample Output:
+5
+12
+13
+0
+
+58. Write a PHP program to check three given integers (small, medium and large) and return true if the difference between small and medium and the difference between medium and large is same.
+Sample Input:
+4, 5, 6
+7, 12, 13
+-1, 0, 1
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+59. Write a PHP program to create a new string using two given strings s1, s2, the format of the new string will be s1s2s2s1.
+Sample Input:
+"Hi", "Hello"
+"whats", "app"
+Sample Output:
+HiHelloHelloHi
+whatsappappwhats
+
+60. Write a PHP program to insert a given string into middle of the another given string of length 4.
+Sample Input:
+"[[]]","Hello"
+"(())", "Hi"
+Sample Output:
+[[Hello]]
+((Hi))
+
+61. Write a PHP program to create a new string using three copies of the last two character of a given string of length atleast two.
+Sample Input:
+"Hello"
+"Hi"
+Sample Output:
+lololo
+HiHiHi
+
+62. Write a PHP program to create a new string using first two characters of a given string. If the string length is less than 2 then return the original string.
+Sample Input:
+"Hello"
+"Hi"
+"H"
+" "
+Sample Output:
+He
+Hi
+H
+
+63. Write a PHP program to create a new string of the first half of a given string of even length.
+Sample Input:
+"Hello"
+"Hi"
+Sample Output:
+He
+H
+
+64. Write a PHP program to create a new string without the first and last character of a given string of length atleast two.
+Sample Input:
+"Hello"
+"Hi"
+"Python"
+Sample Output:
+elly
+tho
+
+65. Write a PHP program to create a new string from two given string one is shorter and another is longer. The format of the new string will be long string + short string + long string.
+Sample Input:
+"Hello", "Hi"
+"JS", "Python"
+Sample Output:
+HelloHiHello
+PythonJSPython
+
+66. Write a PHP program to concat two given string of length atleast 1, after removing their first character.
+Sample Input:
+"Hello", "Hi"
+"JS", "Python"
+Sample Output:
+elloi
+Sython
+
+67. Write a PHP program to move the first two characters to the end of a given string of length at least two.
+Sample Input:
+"Hello"
+"JS"
+Sample Output:
+lloHe
+JS
+
+68. Write a PHP program to move the last two characters to the start of a given string of length at least two.
+Sample Input:
+"Hello"
+"JS"
+Sample Output:
+loHel
+JS
+
+69. Write a PHP program to create a new string without the first and last character of a given string of any length.
+Sample Input:
+"Hello"
+"JS"
+''
+Sample Output:
+ell
+
+70. Write a PHP program to create a new string using the two middle characters of a given string of even length (at least 2).
+Sample Input:
+"Hell"
+"JS"
+Sample Output:
+el
+JS
+
+71. Write a PHP program to check if a given string ends with "on".
+Sample Input:
+"Hello"
+"Python"
+"on"
+"o"
+Sample Output:
+string(2) "lo"
+string(2) "on"
+string(2) "on"
+string(1) "o"
+
+72. Write a PHP program to create a new string using the first and last n characters from a given string of length at least n.
+Sample Input:
+"Hello", 1
+"Python", 2
+"on", 1
+"o", 1
+Sample Output:
+Ho
+Pyon
+on
+oo
+
+73. Write a PHP program to create a new string of length 2 starting at the given index of a given string.
+Sample Input:
+"Hello", 1
+"Python", 2
+"on", 1
+Sample Output:
+el
+th
+on
+
+74. Write a PHP program to create a new string taking 3 characters from the middle of a given string at least 3.
+Sample Input:
+"Hello"
+"Python"
+"abc"
+Sample Output:
+ell
+yth
+abc
+
+75. Write a PHP program to create a new string of length 2, using first two characters of a given string. If the given string length is less than 2 use '#' as missing characters.
+Sample Input:
+"Hello"
+"Python"
+"a"
+""
+Sample Output:
+He
+Py
+a#
+#
+
+76. Write a PHP program to create a new string taking the first character from a given string and the last character from another given string. If the length of any given string is 0, use '#' as its missing character.
+Sample Input:
+"Hello", "Hi"
+"Python", "PHP"
+"JS", "JS"
+"Csharp", ""
+Sample Output:
+Hi
+PP
+JS
+C#
+
+77. Write a PHP program to concat two given strings (lowercase). If there are any double character in new string then omit one character.
+Sample Input:
+"abc", "cat"
+"python", "php"
+"php", "php"
+Sample Output:
+abcat
+PythonPHP
+phphp
+
+78. Write a PHP program to create a new string from a given string after swapping last two characters.
+Sample Input:
+"Hello"
+"Python"
+"PHP"
+"JS"
+"C"
+Sample Output:
+Helol
+Pythno
+PPH
+SJ
+C
+
+79. Write a PHP program to check if a given string begins with 'abc' or 'xyz'. If the string begins with 'abc' or 'xyz' return 'abc' or 'xyz' otherwise return the empty string.
+Sample Input:
+"abc"
+"abcdef"
+"C"
+"xyz"
+"xyzsder"
+Sample Output:
+abc
+abc
+xyz
+xyz
+
+80. Write a PHP program to check whether the first two characters and last two characters of a given string are same.
+Sample Input:
+"abab"
+"abcdef"
+"xyzsderxy"
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+81. Write a PHP program to concat two given strings. If the given strings have different length remove the characters from the longer string.
+Sample Input:
+"abc", "abcd"
+"Python", "Python"
+"JS", "Python"
+Sample Output:
+abcbcd
+PythonPython
+JSon
+
+82. Write a PHP program to create a new string using 3 copies of the first 2 characters of a given string. If the length of the given string is less than 2 use the whole string.
+Sample Input:
+"abc"
+"Python"
+"J"
+Sample Output:
+ababab
+PyPyPy
+JJJ
+
+83. Write a PHP program to create a new string from a given string. If the two characters of the given string from its beginning and end are same return the given string without the first two characters otherwise return the original string.
+Sample Input:
+"abcab"
+"Python"
+Sample Output:
+cab
+Python
+
+84. Write a PHP program to create a new string from a given string without the first and last character if the first or last characters are 'a' otherwise return the original given string.
+Sample Input:
+"abcab"
+"python"
+"abcda"
+"jython"
+Sample Output:
+bcab
+Python
+bcd
+jython
+
+85. Write a PHP program to create a new string from a given string. If the first or first two characters is 'a', return the string without those 'a' characters otherwise return the original given string.
+Sample Input:
+"abcab"
+"python"
+"aacda"
+"jython"
+Sample Output:
+bcab
+Python
+cda
+jython
+
+86. Write a PHP program to check a given array of integers of length 1 or more and return true if 10 appears as either first or last element in the given array.
+Sample Input:
+{ 10, 20, 40, 50 }
+{ 5, 20, 40, 10 }
+{ 10, 20, 40, 10 }
+{ 12, 24, 35, 55 }
+Sample Output:
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+
+87. Write a PHP program to check a given array of integers of length 1 or more and return true if the first element and the last element are equal in the given array.
+Sample Input:
+{ 10, 20, 40, 50 }
+{ 10, 20, 40, 10 }
+{ 12, 24, 35, 55 }
+Sample Output:
+bool(false)
+bool(true)
+bool(false)
+
+88. Write a PHP program to check two given arrays of integers of length 1 or more and return true if they have the same first element or they have the same last element.
+Sample Input:
+{[10, 20, 40, 50], [10, 20, 40, 50]}
+{[10, 20, 40, 10], [10, 20, 40, 5]}
+{[12, 24, 35, 55], [1, 20, 40, 5]}
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+89. Write a PHP program to compute the sum of the elements of an given array of integers.
+Sample Input:
+{ 10, 20, 30, 40, 50 }
+{ 10, 20, -30, -40, 50 }
+Sample Output:
+150
+10
+
+90. Write a PHP program to rotate the elements of a given array of integers (length 4 ) in left direction and return the new array.
+Sample Input:
+{ 10, 20, -30, -40 }
+Sample Output:
+Rotated array: 20,-30,-40,10
+
+91. Write a PHP program to reverse a given array of integers and length 5.
+Sample Input:
+{ 10, 20, -30, -40, 50 }
+Sample Output:
+Reverse array: 50,-40,-30,20,10
+
+92. Write a PHP program to find out the maximum element between the first or last element in a given array of integers ( length 4), replace all elements with maximum element.
+Sample Input:
+{ 10, 20, -30, -40 }
+Sample Output:
+New array with maximum values: 20,20,20,20
+
+93. Write a PHP program to create a new array containing the middle elements from the two given arrays of integers, each length 5.
+Sample Input:
+{ 10, 20, -30, -40, 30 }, { 10, 20, 30, 40, 30 }
+Sample Output:
+New array: -30, 30
+
+94. Write a PHP program to create a new array taking the first and last elements of a given array of integers and length 1 or more.
+Sample Input:
+{ 10, 20, -30, -40, 30 }
+Sample Output:
+New array: 10,30
+
+95. Write a PHP program to check if a given array of integers and length 2, contains 15 or 20.
+Sample Input:
+{ 12, 20 }
+{ 14, 15 }
+{ 11, 21 }
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+96. Write a PHP program to check if a given array of integers and length 2, does not contain 15 or 20.
+Sample Input:
+{ 12, 20 }
+{ 14, 15 }
+{ 11, 21 }
+Sample Output:
+bool(false)
+bool(false)
+bool(true)
+
+97. Write a PHP program to check a given array of integers and return true if the array contains 10 or 20 twice. The length of the array will be 0, 1, or 2.
+Sample Input:
+{ 12, 20 }
+{ 20, 20 }
+{ 10, 10 }
+{ 10 }
+Sample Output:
+bool(false)
+bool(true)
+bool(true)
+bool(false)
+
+98. Write a PHP program to check a given array of integers, length 3 and create a new array. If there is a 5 in the given array immediately followed by a 7 then set 7 to 1.
+Sample Input:
+{ 1, 5,7 }
+Sample Output:
+New array with maximum values: 1,5,1
+
+99. Write a PHP program to compute the sum of the two given arrays of integers, length 3 and find the array which has the largest sum.
+Sample Input:
+{ 10, 20, -30 }, { 10, 20, 30 }
+Sample Output:
+New array with maximum values: 10,20,30
+
+100. Write a PHP program to create an array taking two middle elements from a given array of integers of length even.
+Sample Input:
+{ 1, 5, 7, 9, 11, 13 }
+Sample Output:
+New array: 7 9
+
+101. Write a PHP program to create a new array from two give array of integers, each length 3.
+Sample Input:
+{ 10, 20, 30 }, { 40, 50, 60 }
+Sample Output:
+New array: 10,20,30,40,50,60
+
+102. Write a PHP program to create a new array swapping the first and last elements of a given array of integers and length will be least 1.
+Sample Input:
+{ 1, 5, 7, 9, 11, 13 }
+Sample Output:
+New array, after swapping first and last elements: 13,5,7,9,11,1
+
+103. Write a PHP program to create a new array length 3 from a given array (length atleast 3) using the elements from the middle of the array.
+Sample Input:
+{ 1, 5, 7, 9, 11, 13 }
+Sample Output:
+New array: 7,9,11
+
+104. Write a PHP program to find the largest value from first, last, and middle elements of a given array of integers of odd length (atleast 1).
+Sample Input:
+{1}
+{1,2,9}
+{1,2,9,3,3}
+{1,2,3,4,5,6,7}
+{1,2,2,3,7,8,9,10,6,5,4}
+Sample Output:
+1
+9
+9
+7
+8
+
+105. Write a PHP program to create a new array taking the first two elements from a given array. If the length of the given array is less than 2 then return the give array.
+Sample Input:
+{ 1, 5, 7, 9, 11, 13 }
+Sample Output:
+New array: 1,5
+
+106. Write a PHP program to count even number of elements in a given array of integers.
+Sample Input:
+{ 1, 5, 7, 9, 10, 12 }
+Sample Output:
+Number of even elements: 2
+
+107. Write a PHP program to compute the difference between the largest and smallest values in a given array of integers and length one or more.
+Sample Input:
+{ 1, 5, 7, 9, 10, 12 }
+Sample Output:
+Difference between the largest and smallest values: 11
+
+108. Write a PHP program to compute the sum of values in a given array of integers except the number 17. Return 0 if the given array has no integer.
+Sample Input:
+{ 1, 5, 7, 9, 10, 17 }
+Sample Output:
+Sum of values in the array of integers except the number 17: 32
+
+109. Write a PHP program to compute the sum of the numbers in a given array except those numbers starting with 5 followed by atleast one 6. Return 0 if the given array has no integer.
+Sample Input:
+{ 1, 5, 7, 9, 10, 17 }
+{ 1, 5, 6, 9, 10, 17 }
+{ 5, 6, 7, 9, 10, 17, 1 }
+{ 11, 9, 10, 17, 5, 6 }
+
+Sample Output:
+Sum of the numbers of the said array except those numbers starting with 5 followed by atleast one 6:
+49
+Sum of the numbers of the said array except those numbers starting with 5 followed by atleast one 6:
+37
+Sum of the numbers of the said array except those numbers starting with 5 followed by atleast one 6:
+44
+Sum of the numbers of the said array except those numbers starting with 5 followed by atleast one 6:
+47
+
+110. Write a PHP program to check if a given array of integers contains 5 next to a 5 somewhere.
+Sample Input:
+{ 1, 5, 6, 9, 10, 17 }
+{ 1, 5, 5, 9, 10, 17 }
+{ 1, 5, 5, 9, 10, 17, 5, 5 }
+Sample Output:
+bool(false)
+bool(true)
+bool(true)
+
+111. Write a PHP program to check whether a given array of integers contains 5's and 7's.
+Sample Input:
+{ 1, 5, 6, 9, 10, 17 }
+{ 1, 4, 7, 9, 10, 17 }
+{ 1, 1, 2, 9, 10, 17}
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+
+112. Write a PHP program to check if the sum of all 5' in the array exactly 15 in a given array of integers.
+Sample Input:
+{ 1, 5, 6, 9, 10, 17 }
+{ 1, 5, 5, 5, 10, 17 }
+{ 1, 1, 5, 5, 5, 5}
+Sample Output:
+bool(false)
+bool(true)
+bool(false)
+
+113. Write a PHP program to check if the number of 3's is greater than the number of 5's.
+Sample Input:
+{ 1, 5, 6, 9, 3, 3 }
+{ 1, 5, 5, 5, 10, 17 }
+{ 1, 3, 3, 5, 5, 5}
+Sample Output:
+bool(true)
+bool(false)
+bool(false)
+
+114. Write a PHP program to check if a given array of integers contains a 3 or a 5.
+Sample Input:
+{ 5, 5, 5, 5, 5 }
+{ 3, 3, 3, 3 }
+{ 3, 3, 3, 5, 5, 5}
+{ 1, 6, 8, 10}
+Sample Output:
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+
+115. Write a PHP program to check if a given array of integers contains no 3 or a 5.
+Sample Input:
+{ 5, 5,5, 5, 5 }
+{ 3, 3, 3, 3 }
+{ 3, 3, 3, 5, 5, 5}
+{ 1, 6, 8, 10}
+Sample Output:
+bool(true)
+bool(true)
+bool(false)
+bool(true)
+
+116. Write a PHP program to check if an array of integers contains a 3 next to a 3 or a 5 next to a 5 or both.
+Sample Input:
+{ 5, 5, 5, 5, 5 }
+{ 1, 2, 3, 4 }
+{ 3, 3, 5, 5, 5, 5}
+{ 1, 5, 5, 7, 8, 10}
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+bool(true)
+
+117. Write a PHP program to check a given array of integers and return true if the given array contains two 5's next to each other, or two 5 separated by one element.
+Sample Input:
+{ 5, 5, 1, 5, 5 }
+{ 1, 2, 3, 4 }
+{ 3, 3, 5, 5, 5, 5}
+{ 1, 5, 5, 7, 8, 10}
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+bool(true)
+
+118. Write a PHP program to check a given array of integers and return true if there is a 3 with a 5 somewhere later in the given array.
+Sample Input:
+{ 3, 5,1, 3, 7 }
+{ 1, 2, 3, 4 }
+{ 3, 3, 5, 5, 5, 5}
+{ 2, 5, 5, 7, 8, 10}
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+bool(false)
+
+119. Write a PHP program to check a given array of integers and return true if the given array contains either 2 even or 2 odd values all next to each other.
+Sample Input:
+{ 3, 5, 1, 3, 7 }
+{ 1, 2, 3, 4 }
+{ 3, 3, 5, 5, 5, 5}
+{ 2, 4, 5, 6}
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+bool(true)
+
+120. Write a PHP program to check a given array of integers and return true if the value 5 appears 5 times and there are no 5 next to each other.
+Sample Input:
+{ 3, 5,1, 5, 3, 5, 7, 5, 1, 5 }
+{ 3, 5, 5, 5, 5, 5, 5}
+{ 3, 5, 2, 5, 4, 5, 7, 5, 8, 5}
+{ 2, 4, 5, 5, 5, 5}
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+bool(false)
+
+121. Write a PHP program to check a given array of integers and return true if every 5 that appears in the given array is next to another 5.
+Sample Input:
+{ 3, 5,5, 3, 7 }
+{ 3, 5, 5, 4, 1, 5, 7}
+{ 3, 5, 5, 5, 5, 5}
+{ 2, 4, 5, 5, 6, 7, 5}
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+bool(false)
+
+122. Write a PHP program to check a given array of integers and return true if the specified number of same elements appears at the start and end of the given array.
+Sample Input:
+{ 3, 7, 5, 5, 3, 7 }, 2
+{ 3, 7, 5, 5, 3, 7 }, 3
+{ 3, 7, 5, 5, 3, 7, 5 }, 3
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+123. Write a PHP program to check a given array of integers and return true if the array contains three increasing adjacent numbers.
+Sample Input:
+{ 1, 2, 3, 5, 3, 7 }
+{ 3, 7, 5, 5, 3, 7 }
+{ 3, 7, 5, 5, 6, 7, 5 }
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+124. Write a PHP program to shift an element in left direction and return a new array.
+Sample Input:
+{ 10, 20, -30, -40, 50 }
+Sample Output:
+New array: 20,-30,-40,50,10
+
+125. Write a PHP program to create a new array taking the elements before the element value 5 from a given array of integers.
+Sample Input:
+{ 1, 2, 3, 5,7 }
+Sample Output:
+New array: 1,2,3
+
+126. Write a PHP program to create a new array taking the elements after the element value 5 from a given array of integers.
+Sample Input:
+{ 1, 2, 3, 5, 7, 9, 11 }
+Sample Output:
+New array: 7,9,11
+
+127. Write a PHP program to create a new array from a given array of integers shifting all zeros to left direction.
+Sample Input:
+{ 1, 2, 0, 3, 5, 7, 0, 9, 11 }
+Sample Output:
+New array: 0,0,1,3,5,7,2,9,11
+
+128. Write a PHP program to create a new array after replacing all the values 5 with 0 shifting all zeros to right direction.
+Sample Input:
+{ 1, 2, 0, 3, 5, 7, 0, 9, 11 }
+Sample Output:
+New array: 1,2,3,7,9,11,0,0,0
+
+129. Write a PHP program to create new array from a given array of integers shifting all even numbers before all odd numbers.
+Sample Input:
+{ 1, 2, 5, 3, 5, 4, 6, 9, 11 }
+Sample Output:
+New array: 2,4,6,3,5,1,5,9,11
+
+130. Write a PHP program to check if the value of each element is equal or greater than the value of previous element of a given array of integers.
+Sample Input:
+{ 5, 5, 1, 5, 5 }
+{ 1, 2, 3, 4 }
+{ 3, 3, 5, 5, 5, 5}
+{ 1, 5, 5, 7, 8, 10}
+Sample Output:
+bool(false)
+bool(true)
+bool(true)
+bool(true)
+
+131. Write a PHP program to check a given array (length will be atleast 2) of integers and return true if there are two values 15, 15 next to each other.
+Sample Input:
+{ 5, 5,1, 15, 15 }
+{ 15, 2, 3, 4, 15 }
+{ 3, 3, 15, 15, 5, 5}
+{ 1, 5, 15, 7, 8, 15}
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+bool(false)
+
+132. Write a PHP program to find the larger average value between the first and the second half of a given array of integers and minimum length is atleast 2. Assume that the second half begins at index (array length)/2.
+Sample Input:
+{ 1, 2, 3, 4, 6, 8 }
+{ 15, 2, 3, 4, 15, 11 }
+Sample Output:
+6
+10
+
+133. Write a PHP program to count the number of strings with given length in given array of strings.
+Sample Input:
+{"a", "b", "bb", "c", "ccc" }, 1
+Sample Output:
+Number of array:
+3
+
+134. Write a PHP program to create a new array using the first n strings from a given array of strings. (n>=1 and <=length of the array).
+Sample Input:
+{"a", "b", "bb", "c", "ccc" }, 3
+Sample Output:
+a b bb
+
+135. Write a PHP program to check a positive integer and return true if it contains a number 2.
+Sample Input:
+123
+13
+222
+Sample Output:
+bool(true)
+bool(false)
+bool(true)
+
+136. Write a PHP program to create a new array of given length using the odd numbers from a given array of positive integers.
+Sample Input:
+{1,2,3,5,7,9,10},3
+Sample Output:
+New array: 1,3,5
+
+Arrays 
+
+1. $color = array('white', 'green', 'red', 'blue', 'black');
+Write a script which will display the following string
+
+"The memory of that scene for me is like a frame of film forever frozen at that moment: the red carpet, the green lawn, the white house, the leaden sky. The new president and his first lady. - Richard M. Nixon"
+and the words 'red', 'green' and 'white' will come from $color.
+
+
+2.  $color = array('white', 'green', 'red'')
+Write a PHP script which will display the colors in the following way :
+
+Output :
+white, green, red,
+
+. green
+. red
+. white
+
+
+3. $ceu = 
+    array( 
+        "Italy"=>"Rome", 
+        "Luxembourg"=>"Luxembourg", 
+        "Belgium"=> "Brussels", 
+        "Denmark"=>"Copenhagen", 
+        "Finland"=>"Helsinki", 
+        "France" => "Paris", 
+        "Slovakia"=>"Bratislava", 
+        "Slovenia"=>"Ljubljana", 
+        "Germany" => "Berlin", 
+        "Greece" => "Athens", 
+        "Ireland"=>"Dublin", 
+        "Netherlands"=>"Amsterdam", 
+        "Portugal"=>"Lisbon", 
+        "Spain"=>"Madrid", 
+        "Sweden"=>"Stockholm", 
+        "United Kingdom"=>"London", 
+        "Cyprus"=>"Nicosia", 
+        "Lithuania"=>"Vilnius", 
+        "Czech Republic"=>"Prague", 
+        "Estonia"=>"Tallin", 
+        "Hungary"=>"Budapest", 
+        "Latvia"=>"Riga", 
+        "Malta"=>"Valetta", 
+        "Austria" => "Vienna", 
+        "Poland"=>"Warsaw"
+    ) ;
+
+Create a PHP script which displays the capital and country name from the above array $ceu. Sort the list by the capital of the country.
+
+Sample Output :
+The capital of Netherlands is Amsterdam 
+The capital of Greece is Athens 
+The capital of Germany is Berlin 
+
+
+4. $x = array(1, 2, 3, 4, 5);
+Delete an element from the above PHP array. After deleting the element, integer keys must be normalized.
+
+Sample Output :
+array(5) { [0]=> int(1) [1]=> int(2) [2]=> int(3) [3]=> int(4) [4]=> int(5) } 
+array(4) { [0]=> int(1) [1]=> int(2) [2]=> int(3) [3]=> int(5) }
+
+5. $color = array(4 => 'white', 6 => 'green', 11=> 'red');
+Write a PHP script to get the first element of the above array. 
+Expected result : white
+
+6. Write a PHP script which decodes the following JSON string.
+
+Sample JSON code :
+{"Title": "The Cuckoos Calling",
+"Author": "Robert Galbraith",
+"Detail": {
+"Publisher": "Little Brown"
+}}
+Expected Output :
+Title : The Cuckoos Calling
+Author : Robert Galbraith
+Publisher : Little Brown
+
+7. Write a PHP script that inserts a new item in an array in any position.
+Expected Output :
+Original array : 
+1 2 3 4 5 
+After inserting '$' the array is :
+1 2 3 $ 4 5
+
+8. Write a PHP script to sort the following associative array 
+
+array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40") in
+
+a) ascending order sort by value
+b) ascending order sort by Key
+c) descending order sorting by Value
+d) descending order sorting by Key
+
+
+9. Write a PHP script to calculate and display average temperature, five lowest and highest temperatures. 
+
+Recorded temperatures : 78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73, 75, 79, 73
+
+Expected Output :
+Average Temperature is : 70.6 
+List of seven lowest temperatures : 60, 62, 63, 63, 64, 
+List of seven highest temperatures : 76, 78, 79, 81, 85,
+
+
+10. Write a PHP program to sort an array of positive integers using the Bead-Sort Algorithm. 
+
+According to Wikipedia "Bead-sort is a natural sorting algorithm, developed by Joshua J. Arulanandham, Cristian S. Calude and Michael J. Dinneen in 2002. Both digital and analog hardware implementations of bead sort can achieve a sorting time of O(n); however, the implementation of this algorithm tends to be significantly slower in software and can only be used to sort lists of positive integers".
+
+Input array : Array ( [0] => 5 [1] => 3 [2] => 1 [3] => 3 [4] => 8 [5] => 7 [6] => 4 [7] => 1 [8] => 1 [9] => 3 )
+Expected Result : Array ( [0] => 8 [1] => 7 [2] => 5 [3] => 4 [4] => 3 [5] => 3 [6] => 3 [7] => 1 [8] => 1 [9] => 1 )
+
+11. Write a PHP program to merge (by index) the following two arrays.
+Sample arrays :
+$array1 = array(array(77, 87), array(23, 45));
+$array2 = array("w3resource", "com");
+Expected Output :
+
+Array  
+(      
+[0] => Array          
+(              
+[0] => w3resource              
+[1] => 77              
+[2] => 87          
+)        
+[1] => Array          
+(              
+[0] => com              
+[1] => 23              
+[2] => 45          
+)    
+)
+
+12. Write a PHP function to change the following array's all values to upper or lower case.
+Sample arrays :
+$Color = array('A' => 'Blue', 'B' => 'Green', 'c' => 'Red');
+Expected Output :
+Values are in lower case.
+Array ( [A] => blue [B] => green [c] => red ) 
+Values are in upper case.
+Array ( [A] => BLUE [B] => GREEN [c] => RED )
+
+
+13. Write a PHP script which displays all the numbers between 200 and 250 that are divisible by 4.
+Note : Do not use any PHP control statement.
+Expected Output : 200,204,208,212,216,220,224,228,232,236,240,244,248
+
+
+14. Write a PHP script to get the shortest/longest string length from an array.
+Sample arrays : ("abcd","abc","de","hjjj","g","wer")
+Expected Output : The shortest array length is 1. The longest array length is 4.
+
+
+15. Write a PHP script to generate unique random numbers within a range.
+Sample Range : (11, 20)
+Sample Output : 17 16 13 20 14 19 18 15 11 12
+
+
+16. Write a PHP script to get the largest key in an array.
+
+17. Write a PHP function that returns the lowest integer that is not 0.
+
+18. Write a PHP function to floor decimal numbers with precision.
+Note: Accept three parameters number, precision, and $separator
+Sample Data :
+1.155, 2, "."
+100.25781, 4, "."
+-2.9636, 3, "."
+
+Expected Output :
+1.15
+100.2578
+-2.964
+
+19. Write a PHP script to print "second" and Red from the following array.
+
+Sample Data :
+$color = array ( "color" => array ( "a" => "Red", "b" => "Green", "c" => "White"),
+"numbers" => array ( 1, 2, 3, 4, 5, 6 ),
+"holes" => array ( "First", 5 => "Second", "Third"));
+
+20. Write a PHP function to sort an array according to another array acting as a priority list.
+
+21. Write a PHP function to sort subnets.
+
+22. Write a PHP script to sort the following array by the day (page_id) and username.
+
+23. Write a PHP program to sort a multi-dimensional array set by a specific key.
+
+24. Write a PHP script to sort an array using case-insensitive natural ordering.
+
+25. Write a PHP function to sort entity letters.
+
+26. Write a PHP function to shuffle an associative array, preserving key, value pairs.
+
+27. Write a PHP function to generate a random password (contains uppercase, lowercase, numeric and other) using shuffle() function
+
+28. Write a PHP script to sort an array in reverse order (highest to lowest)
+
+29. Write a PHP program to generate an array with a range taken from a string
+
+30. Write a PHP program to create a letter range with arbitrary length
+
+31. Write a PHP program to get the index of the highest value in an associative array
+
+32. Write a PHP program to get the extension of a file
+
+33. Write a PHP function to search a specified value within the values of an associative array
+
+34. Write a PHP program to sort an associative array (alphanumeric with case-sensitive data) by values
+
+35. Write a PHP script to trim all the elements in an array using array_walk function
+
+36. Write a PHP script to lower-case and upper-case, all elements in an array
+
+37. Write a PHP script to count the total number of times a specific value appears in an array
+
+38. Write a PHP function to create a multidimensional unique array for any single key index
+
+39. Write a PHP program to remove duplicate values from an array which contains only strings or only integers
+
+40. Write a PHP program to get a sorted array without preserving the keys
+
+41. Write a PHP program to identify the email addresses which are not unique
+
+42. Write a PHP function to find unique values from multidimensional arrays and flatten them in zero depth.
+
+43. Write a PHP script to merge two commas separated lists with unique value only.
+
+44. Write a PHP a function to remove a specified, duplicate entry from an array.
+
+45. Write a PHP script to do a multi-dimensional difference, i.e. returns values of the first array that are not in the second array.
+Note : Use array_udiff() function.
+
+46. Write a PHP function to check whether all array values are strings or not
+
+47. Write a PHP function to get an array with the first key and value
+
+
+48. Write a PHP function to set union of two arrays
+
+49. Write a PHP script to get an array containing all the entries of an array which have the keys that are present in another array
+Test Data : 1st array : ('c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', c4 => 'Black')
+2nd array : ('c2', 'c4')
+Output :
+Array
+(
+[c2] => Green
+[c4] => Black
+)
+
+
+50. Write a PHP script to get the last value of an array without affecting the pointer
+
+
+51. Write a PHP program to filter out some elements with certain key-names
+Test Data :
+1st array : ('c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', c4 => 'Black')
+2nd array : ('c2', 'c4')
+Output :
+Array
+(
+[c1] => Red
+[c3] => White
+)
+
+
+52. Write a PHP function to filter a multi-dimensional array. The function will return those items that will match with the specified value
+
+53. Write a PHP script to delete a specific value from an array using array_filter() function
+
+54. Write a PHP script to remove all white spaces in an array
+
+55. Write a PHP function to convert a string to an array (trimming every line and remove empty lines)
+
+56. Write a PHP script to create a two-dimensional array (4x4), initialized to 10
+
+57. Write a PHP function to compares two multidimensional arrays and returns the difference
+
+58. Write a PHP script to combine (using one array for keys and another for its values) the following two arrays
+('x', 'y', 'y'), (10, 20, 30)
+
+
+59. Write a PHP program to create a range like the following array
+Array
+(
+[20] => 2
+[21] => 3
+[22] => 4
+[23] => 5
+[24] => 6
+[25] => 7
+)
+
+Loops
+
+1. Create a script that displays 1-2-3-4-5-6-7-8-9-10 on one line. There will be no hyphen(-) at starting and ending position.
+
+
+2. Create a script using a for loop to add all the integers between 0 and 30 and display the total.
+
+
+3. Create a script to construct the following pattern, using nested for loop.
+
+*  
+* *  
+* * *  
+* * * *  
+* * * * *   
+
+4. Create a script to construct the following pattern, using a nested for loop.
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+5. Write a program to calculate and print the factorial of a number using a for loop. The factorial of a number is the product of all integers up to and including that number, so the factorial of 4 is 4*3*2*1= 24.
+
+
+6. Write a program which will give you all of the potential combinations of a two-digit decimal combination, printed in a comma delimited format :
+Sample output :
+00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99,
+
+
+7. Write a program which will count the "r" characters in the text "w3resource".
+
+
+8. Write a PHP script that creates the following table using for loops. Add cellpadding="3px" and cellspacing="0px" to the table tag.
+
+1 * 1 = 1	1 * 2 = 2	1 * 3 = 3	1 * 4 = 4	1 * 5 = 5
+2 * 1 = 2	2 * 2 = 4	2 * 3 = 6	2 * 4 = 8	2 * 5 = 10
+3 * 1 = 3	3 * 2 = 6	3 * 3 = 9	3 * 4 = 12	3 * 5 = 15
+4 * 1 = 4	4 * 2 = 8	4 * 3 = 12	4 * 4 = 16	4 * 5 = 20
+5 * 1 = 5	5 * 2 = 10	5 * 3 = 15	5 * 4 = 20	5 * 5 = 25
+6 * 1 = 6	6 * 2 = 12	6 * 3 = 18	6 * 4 = 24	6 * 5 = 30
+
+9. Write a PHP script using nested for loop that creates a chess board as shown below.
+Use table width="270px" and take 30px as cell height and width.
+
+chess board
+
+
+10. Write a PHP script that creates the following table (use for loops).
+
+1	2	3	4	5	6	7	8	9	10
+2	4	6	8	10	12	14	16	18	20
+3	6	9	12	15	18	21	24	27	30
+4	8	12	16	20	24	28	32	36	40
+5	10	15	20	25	30	35	40	45	50
+6	12	18	24	30	36	42	48	54	60
+7	14	21	28	35	42	49	56	63	70
+8	16	24	32	40	48	56	64	72	80
+9	18	27	36	45	54	63	72	81	90
+10	20	30	40	50	60	70	80	90	100
+
+11. Write a PHP program which iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+
+12. Write a PHP program to generate and display the first n lines of a Floyd triangle. (use n=5 and n=11 rows).
+According to Wikipedia Floyd's triangle is a right-angled triangular array of natural numbers, used in computer science education. It is named after Robert Floyd. It is defined by filling the rows of the triangle with consecutive numbers, starting with a 1 in the top left corner:
+Sample output for n = 5 :
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+
+13. Write a PHP program to print alphabet pattern 'A'.
+Expected Output:
+
+  ***                                                       
+ *   *                                                      
+ *   *                                                      
+ *****                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   * 
+
+14. Write a PHP program to print alphabet pattern 'B'.
+Expected Output:
+
+ ****                                                       
+ *   *                                                      
+ *   *                                                      
+ ****                                                       
+ *   *                                                      
+ *   *                                                      
+ **** 
+
+15. Write a PHP program to print alphabet pattern 'C'.
+Expected Output:
+
+  ***                                                       
+ *   *                                                      
+ *                                                          
+ *                                                          
+ *                                                          
+ *   *                                                      
+  ***
+
+16. Write a PHP program to print alphabet pattern 'D'.
+Expected Output:
+
+ ****                                                       
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ ****
+
+17. Write a PHP program to print alphabet pattern 'E'.
+Expected Output:
+
+ *****                                                      
+ *                                                          
+ *                                                          
+ ****                                                       
+ *                                                          
+ *                                                          
+ *****
+
+18. Write a PHP program to print alphabet pattern 'F'.
+Expected Output:
+
+ *****                                                      
+ *                                                          
+ *                                                          
+ ****                                                       
+ *                                                          
+ *                                                          
+ *
+
+19. Write a PHP program to print alphabet pattern 'G'.
+Expected Output:
+
+  ***                                                       
+ *   *                                                      
+ *                                                          
+ * ***                                                      
+ *   *                                                      
+ *   *                                                      
+  ***
+
+20. Write a PHP program to print alphabet pattern 'H'.
+Expected Output:
+
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *****                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *
+
+21. Write a PHP program to print alphabet pattern 'I'.
+Expected Output:
+
+ *****                                                      
+   *                                                        
+   *                                                        
+   *                                                        
+   *                                                        
+   *                                                        
+ *****
+
+22. Write a PHP program to print alphabet pattern 'J'.
+Expected Output:
+
+   ***                                                      
+    *                                                       
+    *                                                       
+    *                                                       
+    *                                                       
+  * *                                                       
+   *  
+
+23. Write a PHP program to print alphabet pattern 'K'.
+Expected Output:
+
+ *   *                                                      
+ *  *                                                       
+ * *                                                        
+ **                                                         
+ * *                                                        
+ *  *                                                       
+ *   *                                                      
+ *    * 
+
+24. Write a PHP program to print alphabet pattern 'L'.
+Expected Output:
+
+ *                                                          
+ *                                                          
+ *                                                          
+ *                                                          
+ *                                                          
+ *                                                          
+ ***** 
+
+25. Write a PHP program to print alphabet pattern 'M'.
+Expected Output:
+
+ *   *                                                      
+ *   *                                                      
+ ** **                                                      
+ * * *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   * 
+
+26. Write a PHP program to print alphabet pattern 'N'.
+Expected Output:
+
+ *   *                                                      
+ *   *                                                      
+ **  *                                                      
+ * * *                                                      
+ *  **                                                      
+ *   *                                                      
+ *   *
+
+27. Write a PHP program to print alphabet pattern 'O'.
+Expected Output:
+
+  ***                                                       
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+  *** 
+
+28. Write a PHP program to print alphabet pattern 'P'.
+Expected Output:
+
+ ****                                                       
+ *   *                                                      
+ *   *                                                      
+ ****                                                       
+ *                                                          
+ *                                                          
+ *  
+
+29. Write a PHP program to print alphabet pattern 'Q'.
+Expected Output:
+
+  ***                                                       
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ * * *                                                      
+ *  *                                                       
+  ** * 
+
+30. Write a PHP program to print alphabet pattern 'R'.
+Expected Output:
+
+ ****                                                       
+ *   *                                                      
+ *   *                                                      
+ ****                                                       
+ * *                                                        
+ *  *                                                       
+ *   *
+
+31. Write a PHP program to print alphabet pattern 'S'.
+Expected Output:
+
+  ****                                                      
+ *                                                          
+ *                                                          
+  ***                                                       
+     *                                                      
+     *                                                      
+ ****
+
+32. Write a PHP program to print alphabet pattern 'T'.
+Expected Output:
+
+ *****                                                      
+   *                                                        
+   *                                                        
+   *                                                        
+   *                                                        
+   *  
+
+33. Write a PHP program to print alphabet pattern 'U'.
+Expected Output:
+
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+  ***  
+
+34. Write a PHP program to print alphabet pattern 'V'.
+Expected Output:
+
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+  * *                                                       
+   * 
+
+35. Write a PHP program to print alphabet pattern 'W'.
+Expected Output:
+
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ *   *                                                      
+ * * *                                                      
+ * * *                                                      
+  * * 
+
+36. Write a PHP program to print alphabet pattern 'X'.
+Expected Output:
+
+ *   *                                                      
+ *   *                                                      
+  * *                                                       
+   *                                                        
+  * *                                                       
+ *   *                                                      
+ *   *
+
+37. Write a PHP program to print alphabet pattern 'Y'.
+Expected Output:
+
+ *   *                                                      
+ *   *                                                      
+  * *                                                       
+   *                                                        
+   *                                                        
+   *                                                        
+   *
+
+38. Write a PHP program to print alphabet pattern 'Z'.
+Expected Output:
+
+*******                                                     
+     *                                                      
+    *                                                       
+   *                                                        
+  *                                                         
+ *                                                          
+*******
+
+
+strings
+
+1. Write a PHP script to : -
+a) transform a string all uppercase letters.
+b) transform a string all lowercase letters.
+c) make a string's first character uppercase.
+d) make a string's first character of all the words uppercase.
+
+2. Write a PHP script to split the following string.
+Sample string : '082307'
+Expected Output : 08:23:07
+
+3. Write a PHP script to check whether a string contains a specific string?
+Sample string : 'The quick brown fox jumps over the lazy dog.'
+Check whether the said string contains the string 'jumps'.
+
+4. Write a PHP script to convert the value of a PHP variable to string.
+
+5. Write a PHP script to extract the file name from the following string.
+Sample String : 'www.example.com/public_html/index.php'
+Expected Output : 'index.php'
+
+6. Write a PHP script to extract the user name from the following email ID.
+Sample String : 'rayy@example.com'
+Expected Output : 'rayy'
+
+7. Write a PHP script to get the last three characters of a string.
+Sample String : 'rayy@example.com'
+Expected Output : 'com'
+
+8. Write a PHP script to format values in currency style.
+Sample values : value1 = 65.45, value2 = 104.35
+Expected Result : 169.80
+
+9. Write a PHP script to generate simple random password [do not use rand() function] from a given string.
+Sample string : '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz'
+Note : Password length may be 6, 7, 8 etc.
+
+10. Write a PHP script to replace the first 'the' of the following string with 'That'.
+Sample date : 'the quick brown fox jumps over the lazy dog.'
+Expected Result : That quick brown fox jumps over the lazy dog.
+
+11. Write a PHP script to find the first character that is different between two strings.
+String1 : 'football'
+String2 : 'footboll'
+Expected Result : First difference between two strings at position 5: "a" vs "o"
+
+12. Write a PHP script to put a string in an array.
+Sample strings : "Twinkle, twinkle, little star,\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.";
+Expected Result (using var_dump()) : array(4) { [0]=> string(30) "Twinkle, twinkle, little star," [1]=> string(26) "How I wonder what you are." [2]=> string(27) "Up above the world so high," [3]=> string(26) "Like a diamond in the sky." }
+
+13. Write a PHP script to get the filename component of the following path.
+Sample path : "https://www.w3resource.com/index.php"
+Expected Output : 'index'
+
+14. Write a PHP script to print the next character of a specific character.
+Sample character : 'a'
+Expected Output : 'b'
+Sample character : 'z'
+Expected Output : 'a'
+Click me the solution
+
+15. Write a PHP script to remove a part of a string from the beginning.
+Sample string : 'rayy@example.com'
+Expected Output : 'example.com'
+
+16. Write a PHP script to get a hex dump of a string.
+Sample string : 'rayy@example.com'
+
+17. Write a PHP script to insert a string at the specified position in a given string.
+Original String : 'The brown fox'
+Insert 'quick' between 'The' and 'brown'.
+Expected Output : 'The quick brown fox'
+Click me to the see solution
+
+18. Write a PHP script to get the first word of a sentence.
+Original String : 'The quick brown fox'
+Expected Output : 'The'
+
+19. Write a PHP script to remove all leading zeroes from a string.
+Original String : '000547023.24'
+Expected Output : '547023.24'
+
+20. Write a PHP script to remove part of a string.
+Original String : 'The quick brown fox jumps over the lazy dog'
+Remove 'fox' from the above string.
+Expected Output : 'The quick brown jumps over the lazy dog'
+
+21. Write a PHP script to remove trailing slash from a string.
+Original String : 'The quick brown fox jumps over the lazy dog///'
+Expected Output : 'The quick brown fox jumps over the lazy dog'
+
+22. Write a PHP script to get the characters after the last '/' in an url.
+Sample URL : 'http://www.example.com/5478631'
+Expected Output : '5478631'
+
+23. Write a PHP script to replace multiple characters from the following string.
+Sample String : '\"\1+2/3*2:2-3/4*3'
+Expected Output : '1 2 3 2 2 3 4 3'
+
+24. Write a PHP script to select first 5 words from the following string.
+Sample String : 'The quick brown fox jumps over the lazy dog'
+Expected Output : 'The quick brown fox jumps'
+
+25. Write a PHP script to remove comma(s) from the following numeric string.
+Sample String : '2,543.12'
+Expected Output : 2543.12
+
+26. Write a PHP script to print letters from 'a' to 'z'.
+Expected Result : abcdefghijklmnopqrstuvwxyz
+

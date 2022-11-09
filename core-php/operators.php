@@ -115,6 +115,13 @@
 //     echo "value is not equal to 10";
 // }
 
+// $a = null;
+
+// if($a == 10) {
+//     echo "value is 10";
+// }else {
+//     echo "value is not 10";
+// }
 
 
 /**
@@ -125,6 +132,26 @@
  * --$a	Pre-decrement	Decrements $a by one, then returns $a.
  * $a--	Post-decrement	Returns $a, then decrements $a by one.
  */
+
+//  $a = 10;
+
+//  $a++;
+
+//  echo $a;
+
+//  ++$a;
+
+//  echo $a;
+
+// --$a;
+
+// echo $a;
+
+// $a--;
+
+// echo $a;
+
+
 
 /**
  * Logical Operators 
@@ -137,6 +164,23 @@
  * $a || $b	Or	true if either $a or $b is true. 
  */
 
+//  $age = 10;
+
+//  and 
+//  if($age > 10 && $age < 12) {
+//     echo "age is btw 10 to 12";
+//  }
+
+// or
+//  if($age < 12 || $age > 10) {
+//     echo "age is btw 10 to 12";
+//  }
+
+// if($age != 10) {
+//     echo "age is $age";
+// }
+
+
 /**
  * String Operators
  *
@@ -145,6 +189,16 @@
  * The second is the concatenating assignment operator ('.='), which appends the argument 
  * on the right side to the argument on the left side.
  */
+
+
+//  $str = "lorem " . "fasfdasdf";
+
+//  $str = "John";
+
+//  $str .= "Smith";
+
+//  echo $str;
+ 
 
 /**
  * Array Operators
@@ -156,3 +210,79 @@
  * $a <> $b	Inequality	true if $a is not equal to $b.
  * $a !== $b	Non-identity	true if $a is not identical to $b.
  */
+
+//  union
+// $arr1  = [10,20,30];
+// $arr2 = [10,20,30,40];
+
+
+// var_dump($arr1 + $arr2);
+
+// $arr = [10,20,30,40];
+
+// array_push($arr, 10);
+
+// var_dump($arr);
+
+// $array = [10,20,30,40];
+
+// $arr = &$array;
+
+// array_push($arr, 10);
+
+// var_dump($array);
+
+// $arr = [10,20,30,40,60];
+
+// if($array === $arr) {
+//     echo "array is equal";
+// }
+
+// $array = [10,20,30,40,50];
+
+// $arr = [10,20,30,40];
+
+// if($array !=  $arr) {
+//     echo "array are not equal";
+// }
+
+// 1 2
+// c c
+// *           r 1
+// * *         r 2
+// * * *       r
+// * * * *  
+// * * * * * *
+
+//           *    
+//         * *         
+//       * * *       
+//     * * * *  
+//   * * * * *
+
+
+
+for ($i=5; $i >= 1 ; $i--) { 
+
+    for ($j=1; $j <= 5 ; $j++) { 
+
+        if($i <= $j) {
+            echo "*";
+        }else{
+            echo "&nbsp;&nbsp;";
+        }            
+    }
+    echo "<br>";
+}
+
+// for ($i=5; $i <= 5 ; $i--) { 
+//     for ($j=5; $j >=1 ; $j--) { 
+//        echo "*";
+//     }
+
+//     echo "<br>";
+// }
+
+
+
+
