@@ -11,31 +11,31 @@ define("DB", "crud");
 define("USERNAME", "root");
 define("PASSWORD", "");
 
-$connection = new PDO("mysql:host=localhost;dbname=crud", USERNAME, PASSWORD );
+$connection = new PDO("mysql:host=localhost;dbname=crud", USERNAME, PASSWORD);
 
-if(isset($_GET['submit'])) {
-    
+if (isset($_GET['submit'])) {
+
     $name = $_GET['name'];
 
     $sql = "INSERT INTO students(name) values('$name')";
     $query = $connection->exec($sql);
-    if($query) {
+    if ($query) {
         echo "inserted successfully";
-    }else {
+    } else {
         echo "something went wrong";
     }
 }
 
-if(isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 
     $student_name  = $_POST['name'];
 
     $image_path = '';
 
-    if(isset($_FILES['image'])) {
+    if (isset($_FILES['image'])) {
         $name = $_FILES['image']['name'];
 
-        $dir = 'uploads/'. $name;
+        $dir = 'uploads/' . $name;
 
         $tmp_name = $_FILES['image']['tmp_name'];
 
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])) {
         //     echo "Please enter the valid file with extension png or jpeg";
         // }
 
-        if($_FILES['image']['error'] == UPLOAD_ERR_NO_FILE ) {
+        if ($_FILES['image']['error'] == UPLOAD_ERR_NO_FILE) {
             echo "Please upload image file";
         }
 
@@ -63,9 +63,9 @@ if(isset($_POST['submit'])) {
 
     $sql = "INSERT INTO students(name,file) values('$name', '$image_path')";
     $query = $connection->exec($sql);
-    if($query) {
+    if ($query) {
         echo "inserted successfully";
-    }else {
+    } else {
         echo "something went wrong";
     }
 }
@@ -78,7 +78,7 @@ $query = $stmt->execute();
 
 $students = [];
 
-if($query) {
+if ($query) {
     $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -86,12 +86,14 @@ if($query) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form action="" method="POST" enctype="multipart/form-data">
         <div>
@@ -114,15 +116,15 @@ if($query) {
             <th>Image</th>
         </thead>
         <tbody>
-            <?php foreach ($students as $key => $value): ?>
+            <?php foreach ($students as $key => $value) : ?>
                 <tr>
-                    <td><?=$value['id']?></td>
-                    <td><?=$value['name']?></td>
-                    <td><img src="<?=$value['file']?>" alt="<?=$value['name']?>" ></td>
+                    <td><?= $value['id'] ?></td>
+                    <td><?= $value['name'] ?></td>
+                    <td><img src="<?= $value['file'] ?>" alt="<?= $value['name'] ?>"></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 </body>
-</html>
 
+</html>
