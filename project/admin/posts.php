@@ -56,7 +56,7 @@ if ($query) {
                                     <i class="fa fa-eye"></i>
                                 </a>
 
-                                <a href="" class="btn btn-danger">
+                                <a href="deletepost.php?id=<?= $post['id'] ?>" onclick="deleteRedirect(event)" class="btn btn-danger">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>

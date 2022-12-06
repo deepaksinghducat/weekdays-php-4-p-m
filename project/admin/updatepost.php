@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 require_once 'database.php';
 
-if(isset($_POST)) {
- 
+if (isset($_POST)) {
+
     $name = $_POST['name'];
 
     $description = $_POST['description'];
@@ -12,8 +12,8 @@ if(isset($_POST)) {
 
     $image_path = '';
 
-    if($_FILES['image']['error'] == UPLOAD_ERR_NO_FILE) {
-   
+    if ($_FILES['image']['error'] == UPLOAD_ERR_NO_FILE) {
+
         $stmt = $connection->prepare("update posts set name=:name , description=:description where id=:id");
 
         $stmt->bindParam(":name", $name);
@@ -22,19 +22,18 @@ if(isset($_POST)) {
 
         $query =  $stmt->execute();
 
-        if($query) {
+        if ($query) {
             header('location: posts.php');
         }
+    } else {
 
-    }else {
-    
-        $randomString =  md5(rand(0,20));
+        $randomString =  md5(rand(0, 20));
 
         $ext = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
 
         $tmp_name = $_FILES['image']['tmp_name'];
 
-        $dir = "uploads/".$randomString.'.'.$ext;
+        $dir = "uploads/" . $randomString . '.' . $ext;
 
         move_uploaded_file($tmp_name, $dir);
 
@@ -49,8 +48,8 @@ if(isset($_POST)) {
 
         $query =  $stmt->execute();
 
-        if($query) {
+        if ($query) {
             header('location: posts.php');
         }
-    }   
+    }
 }

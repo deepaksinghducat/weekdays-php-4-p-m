@@ -39,6 +39,13 @@
         "autoWidth": false,
         "buttons": [ "pdf"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+    function deleteRedirect(event) {
+        let result = confirm('Are you sure you want to delete');
+
+        if(! result)
+            event.preventDefault();
+    }
 </script>
 </body>
 
