@@ -1,0 +1,337 @@
+<?php
+
+/**
+ * 
+ * 1. The Basics
+ * 2. Properties
+ * 3. Class Constants
+ * 4. Autoloading Classes
+ * 5. Constructors and Destructors
+ * 6. Visibility
+ * 7. Object Inheritance
+ * 8. Scope Resolution Operator (::)
+ * 9. Static Keyword
+ * 10. Class Abstraction
+ * 11. Object Interfaces
+ * 12. Traits
+ * 13. Anonymous classes
+ * 14. Overloading
+ * 15. Object Iteration
+ * 16. Magic Methods
+ * 17. Final Keyword
+ * 18. Object Cloning
+ * 19. Comparing Objects
+ * 20. Late Static Bindings
+ * 21. Objects and references
+ * 22. Object Serialization
+ * 23. Covariance and Contravariance
+ * 
+ */
+
+// class Car
+// {
+//     // properties
+//     protected $name = 'deepak singh gusain';
+
+//     const FULL_NAME = 'deepak singh gusain';
+
+//     // public function __construct($name) {
+//     //    $this->name = $name;
+//     // }
+
+//     //    methods
+//     public function getName()
+//     {
+//         // echo 'deepak';
+//         return $this->name;
+//     }
+
+//     public function __destruct()
+//     {
+//         echo '<br>destruct';
+//     }
+// }
+
+// class Maruti {
+
+// }
+
+// $car = new Car('deepak sadfsafdasfas');
+
+// var_dump($car->name);
+
+// $car = new Car();
+
+// $car->name = 'deepak sadfsafdasfas';
+
+// echo $car->name;
+
+// echo Car::FULL_NAME;
+
+// $car1 = new Car('tata');
+// $car2 = new Car('Maruti');
+
+// echo $car1->name;
+// echo $car1->getName();
+
+// class Modal extends Car {
+//     public function getName()
+//     {
+//         return 'deepak';
+//         // return $this->name;
+//     }
+// }
+
+// $modal = new Modal();
+
+// echo $modal->getName();
+
+
+// class Cart {
+//     public static $cartItems = [];
+
+//     const FULL_NAME = 'deepak singh gusain';
+
+
+//     public static function getAllItems() {
+
+//         return self::FULL_NAME;
+//         return self::$cartItems;
+//     }
+// }
+
+// print_r(Cart::getAllItems());
+
+// class Car {
+//     // properties
+//     private $name = "deepak singh gusain";
+//     // private $name;
+
+
+//     public const fullname = "deepak singh gusain const";
+
+//     // methods
+//     public function getName() {
+//         return  "<br>".$this->name;
+//         return self::fullname;
+//     }
+
+//     public function __construct($name)
+//     {
+//         echo "constructor called $name";
+//         $this->name = $name;
+//     }
+
+//     public function __destruct()
+//     {
+//         echo "<br> destruct called";
+//     }
+// }
+
+
+// $car = new Car();
+// echo $car->getName() . "<br>";
+
+// $car1  = new Car();
+// echo $car1->getName() . "<br>";
+
+// $car = new Car('deepak singh gusain');
+// echo $car->getName() . "<br>";
+
+
+// $car1 = new Car('varsha');
+// echo $car1->getName() . "<br>";
+
+// echo $car == $car ? "true" : "false";
+
+// class ParentClass {
+//     protected $name = "parent";
+
+//     public function getParentName() {
+//         return "<br>". $this->name;
+//     }
+// }
+
+// $parentClass = new ParentClass();
+// // echo $parentClass->name;
+// echo $parentClass->getParentName();
+
+// class ChildClass extends ParentClass {
+//     // public $name = "child";
+
+//     // public function getParentName() {
+//     //     return "<br>".  $this->name ;
+//     // }
+// }
+
+// $childClass = new ChildClass();
+
+// echo $childClass->name;
+// echo $childClass->getParentName();
+
+
+// class ParentClass {
+//     protected $name = "parent";
+
+//     public function __construct($name = 'parent') {
+//         $this->name = $name;
+//     }
+
+//     public function getParentName() {
+//         return "<br>". $this->name;
+//     }
+// }
+
+
+// class ChildClass extends ParentClass {
+
+//     public function __construct($name = 'child') {
+//         parent::__construct($name);
+//         echo parent::getParentName();
+//     }
+
+
+//     public function getParentName() {
+//         // echo parent::getParentName();
+//         return "<br>". $this->name. "fasdfasf";
+//     }
+
+// }
+
+// $childClass = new ChildClass('deepak');
+// echo $childClass->getParentName();
+
+// class First {
+
+// }
+
+// class Second  extends First{
+
+// }
+
+// class Third extends Second{
+
+// }
+
+// static 
+
+// class StaticClass {
+//     public static $cartItems = [];
+
+//     public static function staticFunction() {
+//         return "static function";
+//     }
+// }
+
+// $staticClass = new StaticClass();
+
+// $array = [['name' => 'test']];
+
+// array_push($array,['name' => 'second']);
+
+
+// $staticClass->cartItems = $array;
+// echo "<pre>";
+// print_r($array);
+
+// $staticClass1 = new StaticClass();
+// $array = [['name' => 'test']];
+
+
+// $staticClass1->cartItems = $array;
+// echo "<pre>";
+// print_r($staticClass1->cartItems);
+
+// $array = [['name' => 'test']];
+
+// array_push($array,['name' => 'second']);
+
+// StaticClass::$cartItems = $array;
+
+// print_r(StaticClass::$cartItems);
+
+// echo StaticClass::staticFunction();
+
+
+// abstraction 
+
+// abstract class ParentClass {
+
+//     abstract public function getName();
+
+// }
+
+// class ChildClass extends ParentClass  {
+
+//     // abstract public function getName();
+//     public function getName(){
+//         return 'ChildClass';
+//     }
+// }
+
+// interface 
+
+// interface ParentInterface {
+//     public function getName();
+// }
+
+// class ChildClass implements ParentInterface {
+//     public function getName()
+//     {
+//         return 'ChildClass';
+//     }
+// }
+
+// $childClass = new ChildClass();
+
+// echo $childClass->getName();
+
+// interface First
+// {
+//     public function getFirstName();
+// }
+
+// interface Second
+// {
+//     public function getSecondName();
+// }
+
+// class Third implements First, Second
+// {
+//     public function getFirstName()
+//     {
+//     }
+//     public function getSecondName()
+//     {
+//     }
+// }
+
+// traits
+
+trait GetName
+{
+    public function getName()
+    {
+        return $this->name;
+    }
+}
+
+class First
+{
+    use GetName;
+
+    public $name = 'first';
+}
+
+class Second
+{
+    use GetName;
+
+    public $name = 'second';
+}
+
+$first = new First();
+echo $first->getName(). "<br>";
+
+$second = new Second();
+echo $second->getName();

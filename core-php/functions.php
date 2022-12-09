@@ -119,7 +119,7 @@
  * Arrow functions were introduced in PHP 7.4 as a more concise syntax for anonymous functions.
  */
 
- $area = fn($a) => $a + 10;
+//  $area = fn($a) => $a + 10;
 
- echo $area(10);
+//  echo $area(10);
 
