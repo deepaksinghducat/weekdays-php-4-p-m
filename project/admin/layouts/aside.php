@@ -30,6 +30,15 @@
                         </p>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="users.php" class="nav-link">
+                        <i class="nav-icon fa fa-user"></i>
+                        <p>
+                            User
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -1,12 +1,12 @@
 <?php $connection = require_once 'database.php'; ?>
 
-<?php require_once 'class/post.php'; ?>
+<?php require_once 'class/user.php'; ?>
 
 <?php
 
-$postClass = new Post($connection);
+$userClass = new User($connection);
 
-$posts = $postClass->getAllPosts();
+$users = $userClass->getAllUsers();
 
 ?>
 
@@ -23,9 +23,7 @@ $posts = $postClass->getAllPosts();
 <div class="content-wrapper">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title" style="width: 100%;">Posts
-                <a href="createpost.php" class="btn btn-primary" style="float: right;">Add Post</a>
-            </h3>
+            <h3 class="card-title" style="width: 100%;">User</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -33,27 +31,23 @@ $posts = $postClass->getAllPosts();
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Image</th>
                         <th>Name</th>
-                        <th>Description</th>
                         <th>Created At</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($posts as $post) : ?>
+                    <?php foreach ($users as $user) : ?>
                         <tr>
-                            <td><?= $post['id'] ?></td>
-                            <td><img src="<?= $post['image_path'] ?>" alt="<?= $post['name'] ?>"></td>
-                            <td><?= $post['name'] ?></td>
-                            <td><?= $post['description'] ?></td>
-                            <td><?= $post['created_at'] ?></td>
+                            <td><?= $user['id'] ?></td>
+                            <td><?= $user['name'] ?></td>
+                            <td><?= $user['created_at'] ?></td>
                             <td>
-                                <a href="editpost.php?id=<?= $post['id'] ?>" class="btn btn-primary">
+                                <a href="edituser.php?id=<?= $user['id'] ?>" class="btn btn-primary">
                                     <i class="fa fa-eye"></i>
                                 </a>
 
-                                <a href="deletepost.php?id=<?= $post['id'] ?>" onclick="deleteRedirect(event)" class="btn btn-danger">
+                                <a href="deleteuser.php?id=<?= $user['id'] ?>" onclick="deleteRedirect(event)" class="btn btn-danger">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>

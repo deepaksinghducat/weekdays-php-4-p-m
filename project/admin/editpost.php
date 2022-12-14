@@ -1,25 +1,21 @@
-<?php require_once 'database.php'; ?>
+<?php $connection = require_once 'database.php'; ?>
+
+<?php require_once 'class/post.php'; ?>
 
 <?php
 
 $id = (int) $_GET['id'];
 
-if(! isset($_GET['id'])) {
+if (!isset($_GET['id'])) {
     header("location: posts.php");
 }
 
-$post = [];
+$postClass = new Post($connection);
 
-$stmt = $connection->prepare("select * from posts where id =:id");
-$stmt->bindParam(":id", $id);
-$query = $stmt->execute();
+$post = $postClass->getPostById($id);
 
-if ($query) {
-    $post = $stmt->fetchObject();
-
-    if(! $post) {
-        header("location: posts.php");
-    }
+if (! $post) {
+    header("location: posts.php");
 }
 
 ?>
@@ -44,20 +40,20 @@ if ($query) {
         <!-- /.card-header -->
         <div class="card-body">
             <form action="updatepost.php" method="post" enctype="multipart/form-data">
-                <input type="hidden" value="<?=$id?>" name="post_id">
+                <input type="hidden" value="<?= $id ?>" name="post_id">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="<?=$post->name?>">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="<?= $post->name ?>">
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea class="form-control" id="description" name="description" placeholder="Enter Description"><?=$post->description?></textarea>
+                    <textarea class="form-control" id="description" name="description" placeholder="Enter Description"><?= $post->description ?></textarea>
                 </div>
                 <div class="form-group">
                     <label for="image">Image</label>
                     <input type="file" class="form-control" id="image" name="image">
-                    <?php if($post->image_path) : ?>
-                        <img src="<?=$post->image_path?>" alt="<?=$post->name?>" height="50">
+                    <?php if ($post->image_path) : ?>
+                        <img src="<?= $post->image_path ?>" alt="<?= $post->name ?>" height="50">
                     <?php endif; ?>
                 </div>
                 <button class="btn btn-primary">Submit</button>

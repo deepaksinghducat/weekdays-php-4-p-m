@@ -1,17 +1,16 @@
-<?php 
+<?php
 
-require_once 'database.php';
+$connection = require_once 'database.php';
 
-if(isset($_GET['id'])) {
-    $id = (int) $_GET['id'];
-    
-    $stmt = $connection->prepare("delete from posts where id=:id");
-    $stmt->bindParam(":id", $id);
-    $query = $stmt->execute();
+require_once 'class/post.php';
 
-    if($query) {
-        header('location: posts.php');
-    }
-}else {
+if (isset($_GET['id'])) {
+
+    $postClass = new Post($connection);
+
+    $query = $postClass->delete($_GET['id']);
+
+    header('location: posts.php');
+} else {
     header('location: posts.php');
 }

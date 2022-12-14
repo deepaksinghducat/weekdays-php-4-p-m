@@ -308,30 +308,127 @@
 
 // traits
 
-trait GetName
-{
-    public function getName()
-    {
-        return $this->name;
-    }
-}
+// trait GetName
+// {
+//     public function getName()
+//     {
+//         return $this->name;
+//     }
+// }
 
-class First
-{
-    use GetName;
+// class First
+// {
+//     use GetName;
 
-    public $name = 'first';
-}
+//     public $name = 'first';
+// }
 
-class Second
-{
-    use GetName;
+// class Second
+// {
+//     use GetName;
 
-    public $name = 'second';
-}
+//     public $name = 'second';
+// }
 
-$first = new First();
-echo $first->getName(). "<br>";
+// $first = new First();
+// echo $first->getName(). "<br>";
 
-$second = new Second();
-echo $second->getName();
+// $second = new Second();
+// echo $second->getName();
+
+// Anonymous classes
+// class A {
+//     public $name = 'A';
+// }
+
+// function getname($object) {
+//     return $object->name;
+// }
+
+// echo getname(new A());
+
+// Object Iteration
+// class A {
+//     public $name;
+
+//     public function __construct($name) {
+//         $this->name = $name;
+//     }
+// }
+
+// $array = [
+//     new A('deepak'),
+//     new A('Jyoti'),
+// ];
+
+// foreach($array as $value) {
+//     echo $value->name;
+//     echo "<br>";
+// }
+
+//Magic Methods
+
+// class A
+// {
+//     private $name;
+//     private $age;
+
+//     public function __set($var, $value) {
+//         $this->{$var} = $value;
+//     }
+
+//     public function __get($var)
+//     {
+//         return $this->{$var};
+//     }
+// }
+
+// $a = new A();
+
+// $a->name = 'deepak';
+// $a->age = 28;
+
+// echo $a->name;
+// echo $a->age;
+
+// Final Keyword
+
+// Final class A {
+
+//     finalpublic $name = 'deepak';
+//     final public function getName() {
+
+//     }
+// }
+
+// class B extends A { 
+    
+// }
+
+// Object Cloning
+
+// class A {
+//     public $name = "deepak";
+// }
+
+// $obj1 = new A();
+// $obj1->name = 'jyoti';
+
+// echo $obj1->name;
+
+// $obj2 = clone $obj1;
+// $obj2->name = 'deepak';
+
+// echo $obj2->name;
+
+// object reference
+
+// class A {
+//     public $name  = "deepak";
+// }
+
+// $obj1 = new A();
+
+// $obj2 = &$obj1;
+
+// echo $obj2->name = "deepak";
