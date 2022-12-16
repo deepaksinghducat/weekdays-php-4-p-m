@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $connection = require_once 'database.php';
 
@@ -9,7 +10,7 @@ if (isset($_POST)) {
     $userClass = new User($connection);
 
     $result =  $userClass->login();
-
+    
     if ($result) {
         header('location: dashboard.php');
     } else {

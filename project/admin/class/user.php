@@ -39,7 +39,7 @@ class User
         return false;
     }
 
-      /**
+    /**
      *  Get user by id
      * 
      * return object | boolean 
@@ -50,16 +50,23 @@ class User
 
         $password = $_POST['password'];
 
-        $stmt = $this->connection->prepare("select * from users where email=:email and password=:password");
+        $stmt = $this->connection->prepare("select * from users where email=:email");
         $stmt->bindParam(":email", $email);
-        $stmt->bindParam(":password", $password);
         $query = $stmt->execute();
 
         if ($query) {
             $user = $stmt->fetchObject();
 
-            if($user) {
-                return true;
+            if ($user) {
+                if(password_verify($password, $user->password)) {
+                    
+                    $_SESSION['current_user'] = $user;
+
+                    return true;
+
+                }else{
+                    return false;
+                }
             }
         }
 
@@ -95,7 +102,7 @@ class User
 
         $email = $_POST['email'];
 
-        $password = $_POST['password'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);;
 
         $sql = "insert into users(name,email, password) values('$name','$email', '$password')";
 

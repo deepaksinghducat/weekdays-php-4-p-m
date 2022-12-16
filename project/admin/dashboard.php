@@ -1,3 +1,5 @@
+<?php require_once 'session.php'; ?>
+
 <?php require_once 'database.php'; ?>
 
 <?php require_once 'layouts/header.php'; ?>
@@ -9,7 +11,6 @@
 <!-- Main Sidebar Container -->
 <?php require_once 'layouts/aside.php'; ?>
 
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -17,7 +18,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">afsfasfdas Page</h1>
+                    <h1 class="m-0"> Page</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">

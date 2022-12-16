@@ -1,3 +1,5 @@
+<?php require_once 'session.php'; ?>
+
 <?php $connection = require_once 'database.php'; ?>
 
 <?php require_once 'class/post.php'; ?>

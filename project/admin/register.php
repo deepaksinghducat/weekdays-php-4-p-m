@@ -1,5 +1,14 @@
 <?php require_once 'layouts/front-header.php'; ?>
 
+<?php 
+
+
+
+// $hasPassword = password_hash("1234567890", PASSWORD_DEFAULT);
+
+//  echo password_verify('1234567890', $hasPassword);
+?>
+
 <div class="register-box">
     <div class="register-logo">
         <a href="#"><b>Admin</b></a>
