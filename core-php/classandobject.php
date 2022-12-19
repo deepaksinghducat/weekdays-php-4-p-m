@@ -24,7 +24,6 @@
  * 20. Late Static Bindings
  * 21. Objects and references
  * 22. Object Serialization
- * 23. Covariance and Contravariance
  * 
  */
 
@@ -432,3 +431,157 @@
 // $obj2 = &$obj1;
 
 // echo $obj2->name = "deepak";
+
+// final class Car {
+    // final public function getCarName() {
+
+    // }
+// }
+
+// class Maruti extends Car {
+//     public function getCarName() {
+//         return "maruti";
+//     }   
+// }
+
+// $maruti = new Maruti();
+// echo $maruti->getCarName();
+
+// class Car {
+//     public $name = "maruti";
+
+//     public function __construct($name)
+//     {
+//         $this->name = $name;
+//     }
+// }
+
+// echo "<pre>";
+
+// $car1  = new Car('maruti');
+
+// $car2 = $car1;
+// $car2->name = "tata";
+
+// echo $car2->name;
+
+// echo "<br   >";
+
+// echo $car1->name;
+
+// $number = 10;
+
+// $number2 =  $number;
+
+// $number2 = 15;
+
+
+// echo "<br   >";
+
+// echo $number;
+
+// $number = 10;
+
+
+// function callByValue($value) {
+//     $value = 15;
+
+//     return $value;
+// }
+
+
+// function callByReference(&$value) {
+//     $value = 15;
+
+//     return $value;
+// }
+
+// echo callByValue($number);
+
+// echo "<br>";
+
+// echo $number;
+
+// echo callByReference($number);
+
+// echo "<br>";
+
+// echo $number;
+
+// function name() {
+//     echo "name";
+// }
+
+// $varibaleFun = 'name';
+
+// $varibaleFun();
+
+// class Car {
+
+//     public $name;
+//     public function __construct($name)
+//     {
+//         $this->name = $name;
+//     }
+
+// }
+
+
+// $car1 = new Car('maruti');
+
+// // $car2 = new Car('tata');
+
+// $car2 = $car1;
+
+// echo $car1 === $car2 ? 'true': 'false';
+
+// Late Static Bindings
+
+// class Car {
+
+//     private static $carModal = 2010;
+
+//     public const name = "maruti";
+
+//     function getCarModel(){
+//         return static::$carModal;
+//     }
+// }
+
+
+
+// Car::$carModal;
+
+// $car = new Car();
+
+// echo $car->getCarModel();
+
+
+// 22. Object Serialization
+
+
+// class Car {
+
+//     private  $carModal = 2010;
+
+//     public const name = "maruti";
+
+//     function getCarModel(){
+//         return static::$carModal;
+//     }
+// }
+
+// $car = new Car();
+
+// var_dump( unserialize(serialize($car)) );
+
+
+
+
+
+
+
+
+
+
+

@@ -2,9 +2,9 @@
 
 // setcookie('firstname', 'deepak', time() + (24  * 60 * 60) , '/', '/', true, true);
 
-// setcookie('firstname', 'deepak');
+setcookie('firstname', 'deepak');
 
-// echo isset($_COOKIE['firstname']) ?  $_COOKIE['firstname'] : '';
+echo isset($_COOKIE['firstname']) ?  $_COOKIE['firstname'] : '';
 
 
 // foreach($_COOKIE as $key => $val) {
