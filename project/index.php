@@ -23,12 +23,13 @@ $posts = $postClass->getAllPosts();
         <div class="owl-carousel owl-theme blog-slider">
         <?php foreach($posts as $post): ?>
           <div class="card blog__slide text-center">
-            <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="./admin/<?=$post['image_path']?>" alt="">
-            </div>
+            <a href="details.php?id=<?=$post['id']?>">
+              <div class="blog__slide__img">
+                <img class="card-img rounded-0" src="./admin/<?=$post['image_path']?>" alt="">
+              </div>              
+            </a>
             <div class="blog__slide__content">
-              <a class="blog__slide__label" href="#"><?=$post['name']?></a>
-              <h3><a href="#"><?=$post['description']?></a></h3>
+              <a class="blog__slide__label" href="details.php?id=<?=$post['id']?>"><?=$post['name']?></a>
               <p><?=$post['created_at']?></p>
             </div>
           </div>
