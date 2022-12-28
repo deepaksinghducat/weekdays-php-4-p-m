@@ -96,6 +96,8 @@ class User
      * 
      * return boolean 
      */
+
+     
     public function store()
     {
         $name = $_POST['name'];
