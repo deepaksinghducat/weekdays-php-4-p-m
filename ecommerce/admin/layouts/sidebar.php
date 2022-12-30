@@ -7,7 +7,7 @@
         <a href="#">Order</a>
     </li>
     <li class="list-group-item">
-        <a href="#">Product</a>
+        <a href="../product/index.php">Product</a>
     </li>
     <li class="list-group-item">
         <a href="#">Customer</a>

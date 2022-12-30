@@ -1,3 +1,15 @@
+<?php 
+    spl_autoload_register(function($class){
+        require '../classes/'.$class.'.php';
+    });
+
+    $databaseClass = new Database();
+    
+    $productClass = new Product($databaseClass->connect());
+
+    $products = $productClass->getAllProducts();
+?>
+
 <?php require_once '../../layouts/header.php'; ?>
 <?php require_once '../../layouts/navigation.php'; ?>
 
@@ -8,7 +20,7 @@
         </div>
         <div class="col-sm-10">
             <h1>Product
-                <a class="btn btn-primary" style="float:right">Create Product</a>
+                <a href="create.php" class="btn btn-primary" style="float:right">Create Product</a>
             </h1>
             <table class="table">
                 <thead>
@@ -20,15 +32,17 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($products as $key => $product): ?>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Product Name</td>
-                        <td>$19.25</td>
+                        <th scope="row"><?=$key+1?></th>
+                        <td><?=$product['name']?></td>
+                        <td>$<?=$product['price']?></td>
                         <td>
                             <a href="#" class="btn btn-primary">Edit</a>
                             <a href="#" class="btn btn-primary">Delete</a>
                         </td>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
