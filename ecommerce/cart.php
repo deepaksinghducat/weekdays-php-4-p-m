@@ -3,7 +3,7 @@
 
 <div class="container mt-2  mb-4">
     <h1>Cart</h1>
-    <table class="table text-center" style="border:2px solid #0d6efd">
+    <table class="table text-center">
         <thead>
             <tr>
                 <th scope="col">S No</th>
