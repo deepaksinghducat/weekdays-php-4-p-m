@@ -9,6 +9,13 @@
     <?php if (isset($_SESSION['success'])) : ?>
         toastr.success("<?= $_SESSION['success'] ?>");
     <?php endif; ?>
+
+    function deleteRecord(event) {
+        let result = confirm('Are you sure you want to delete this record?');
+        if(! result) {
+            event.preventDefault();
+        }
+    }
 </script>
 </body>
 

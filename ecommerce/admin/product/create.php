@@ -8,8 +8,12 @@
     $productClass = new Product($databaseClass->connect());
 
     if(isset($_POST['submit'])) {  
-    
-        $result = $productClass->store($_POST);
+
+        $data = $_POST;
+
+        $data = array_merge($data, $_FILES);
+
+        $result = $productClass->store($data);
 
         if($result) {
             $_SESSION['success'] = 'Product created successfully';
@@ -30,7 +34,7 @@
             <?php require_once '../layouts/sidebar.php'; ?>
         </div>
         <div class="col-sm-10">
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <h1 class="sticky-top" style="height: 50px;background-color:#fff">Product Create
 
                     <input type="submit" name="submit" value="Submit" class="btn btn-primary mx-2" style="float: right;">
@@ -71,6 +75,13 @@
                         <label for="quantity" class="col-sm-2 col-form-label">Quantity</label>
                         <div class="col-sm-10">
                             <input type="number" class="form-control" name="quantity" id="quantity" value="">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="image" class="col-sm-2 col-form-label">image</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" name="image[]" id="image" value="" multiple>
                         </div>
                     </div>
                 </div>

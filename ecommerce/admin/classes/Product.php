@@ -1,14 +1,23 @@
 <?php
 
+spl_autoload_register(function ($class) {
+    require $class.'.php';
+});
+
+
 
 class Product
 {
 
     public $connection;
 
+    public $productImageClass;
+
     public function __construct($connection)
     {
         $this->connection = $connection;
+
+        $this->productImageClass = new ProductImage($connection);
     }
 
     public function getAllProducts()
@@ -27,6 +36,16 @@ class Product
 
     public function getProductById($id)
     {
+        $statement = $this->connection->prepare('select * from products where id=:id');
+        $statement->bindParam(':id', $id);
+
+        $result = $statement->execute();
+
+        if ($result) {
+            return $statement->fetch(PDO::FETCH_ASSOC);
+        }
+
+        return null;
     }
 
     public function store($data)
@@ -41,6 +60,13 @@ class Product
         $result = $statement->execute();
 
         if ($result) {
+
+            $lastIndex = $this->connection->lastInsertId();
+
+            if (isset($data['image'])) {
+                $this->upload($data['image'], $lastIndex);
+            }
+
             return true;
         }
 
@@ -49,13 +75,52 @@ class Product
 
     public function update($data, $id)
     {
+        $statement = $this->connection->prepare('update products set name =:name ,short_description=:short_description,description=:description,price=:price,quantity=:quantity where id =:id');
+        $statement->bindParam(':name', $data['name']);
+        $statement->bindParam(':short_description', $data['short_description']);
+        $statement->bindParam(':description', $data['description']);
+        $statement->bindParam(':price', $data['price']);
+        $statement->bindParam(':quantity', $data['quantity']);
+        $statement->bindParam(':id', $id);
+
+        $result = $statement->execute();
+
+        if ($result) {
+            return true;
+        }
+
+        return false;
     }
 
     public function delete($id)
     {
+        $statement = $this->connection->prepare('delete from products where id =:id');
+        $statement->bindParam(':id', $id);
+
+        $result = $statement->execute();
+
+        if ($result) {
+            return true;
+        }
+
+        return false;
     }
 
     public function upload($data, $id)
     {
+        for ($i = 0; $i < count($data['name']); $i++) {
+
+            $randomString =  md5(rand(0, 20));
+
+            $ext = pathinfo($data['name'][$i], PATHINFO_EXTENSION);
+
+            $tmp_name = $data['tmp_name'][$i];
+
+            $dir = dirname(__DIR__) . "//uploads/" . $randomString . '.' . $ext;
+
+            move_uploaded_file($tmp_name, $dir);
+
+            $this->productImageClass->store(['image_path' => $dir, 'product_id' => $id]);
+        }
     }
 }

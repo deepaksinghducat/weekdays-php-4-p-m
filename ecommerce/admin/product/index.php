@@ -38,8 +38,8 @@
                         <td><?=$product['name']?></td>
                         <td>$<?=$product['price']?></td>
                         <td>
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-primary">Delete</a>
+                            <a href="./edit.php?id=<?=$product['id']?>" class="btn btn-primary">Edit</a>
+                            <a href="./delete.php?id=<?=$product['id']?>"  onclick="deleteRecord(event)" class="btn btn-primary">Delete</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
