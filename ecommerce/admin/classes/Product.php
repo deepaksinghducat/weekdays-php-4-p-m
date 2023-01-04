@@ -1,7 +1,7 @@
 <?php
 
 spl_autoload_register(function ($class) {
-    require $class.'.php';
+    require $class . '.php';
 });
 
 
@@ -86,6 +86,12 @@ class Product
         $result = $statement->execute();
 
         if ($result) {
+
+            if (isset($data['image']['name']) && $data['image']['name'][0] != '') {
+                $this->productImageClass->deleteImageByProductId($id);
+                $this->upload($data['image'], $id);
+            }
+
             return true;
         }
 
@@ -118,9 +124,11 @@ class Product
 
             $dir = dirname(__DIR__) . "//uploads/" . $randomString . '.' . $ext;
 
+            $semi_directory = "uploads/" . $randomString . '.' . $ext;
+
             move_uploaded_file($tmp_name, $dir);
 
-            $this->productImageClass->store(['image_path' => $dir, 'product_id' => $id]);
+            $this->productImageClass->store(['image_path' => $semi_directory, 'product_id' => $id]);
         }
     }
 }
