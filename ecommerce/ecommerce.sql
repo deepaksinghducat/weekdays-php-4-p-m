@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2023 at 12:43 PM
+-- Generation Time: Jan 06, 2023 at 12:23 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `ecommerce`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created-at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`id`, `first_name`, `last_name`, `email`, `image_path`, `created-at`) VALUES
+(2, 'fasdfdaSDSadDfsadfasfasfasdf', 'fasdf', 'fsadfasfd@gamil.com', 'uploads/cfcd208495d565ef66e7dff9f98764da.jpg', '2023-01-06 10:59:43');
 
 -- --------------------------------------------------------
 
@@ -42,16 +64,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `short_description`, `description`, `price`, `quantity`, `created_at`) VALUES
-(2, 'asfdasf', 'fasdfasf', 'fsadfasdf', '10.20', 1, '2022-12-30 11:11:25'),
-(3, 'asfdasf', 'fasdfasf', 'fsadfasdf', '10.20', 1, '2022-12-30 11:14:46'),
-(4, 'fsadfasf', 'fasfasfd', 'fsafsadf', '10.50', 100, '2022-12-30 11:22:35'),
-(5, 'fasdfadf', 'fasdfsaf', 'fsdafasdf', '10.50', 100, '2022-12-30 11:25:31'),
-(16, 'fadf', 'fasdfsaf', 'fasdf', '12.00', 2121, '2023-01-02 11:23:33'),
-(17, 'fadf', 'fasdfsaf', 'fasdf', '12.00', 2121, '2023-01-02 11:23:41'),
-(18, '', '', '', '0.00', 0, '2023-01-02 11:34:31'),
-(19, 'fsafas', 'fdasf', 'fsadf', '21.00', 21212, '2023-01-02 11:34:48'),
-(20, 'fsafas', 'fdasf', 'fsadf', '21.00', 21212, '2023-01-02 11:40:04'),
-(21, 'fsafas', 'fdasf', 'fsadf', '21.00', 21212, '2023-01-02 11:40:41');
+(34, 'fsadf', 'fsadf', 'fdsaf', '10.00', 10, '2023-01-06 10:33:16');
 
 -- --------------------------------------------------------
 
@@ -61,7 +74,7 @@ INSERT INTO `products` (`id`, `name`, `short_description`, `description`, `price
 
 CREATE TABLE `product_images` (
   `id` int(11) NOT NULL,
-  `image_path` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image_path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `product_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -71,18 +84,17 @@ CREATE TABLE `product_images` (
 --
 
 INSERT INTO `product_images` (`id`, `image_path`, `product_id`, `created_at`) VALUES
-(1, 'C:\\xampp\\htdocs\\weekdays-php-4-p-m\\ecommerce\\admin', 20, '2023-01-02 11:40:04'),
-(2, 'C:\\xampp\\htdocs\\weekdays-php-4-p-m\\ecommerce\\admin', 20, '2023-01-02 11:40:04'),
-(3, 'C:\\xampp\\htdocs\\weekdays-php-4-p-m\\ecommerce\\admin', 20, '2023-01-02 11:40:04'),
-(4, 'C:\\xampp\\htdocs\\weekdays-php-4-p-m\\ecommerce\\admin', 20, '2023-01-02 11:40:04'),
-(5, 'C:\\xampp\\htdocs\\weekdays-php-4-p-m\\ecommerce\\admin', 21, '2023-01-02 11:40:41'),
-(6, 'C:\\xampp\\htdocs\\weekdays-php-4-p-m\\ecommerce\\admin', 21, '2023-01-02 11:40:41'),
-(7, 'C:\\xampp\\htdocs\\weekdays-php-4-p-m\\ecommerce\\admin', 21, '2023-01-02 11:40:41'),
-(8, 'C:\\xampp\\htdocs\\weekdays-php-4-p-m\\ecommerce\\admin', 21, '2023-01-02 11:40:41');
+(64, 'uploads/c4ca4238a0b923820dcc509a6f75849b.jpg', 34, '2023-01-06 10:33:16');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `products`
@@ -102,16 +114,22 @@ ALTER TABLE `product_images`
 --
 
 --
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- Constraints for dumped tables

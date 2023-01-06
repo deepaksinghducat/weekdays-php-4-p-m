@@ -42,7 +42,6 @@ class ProductImage
 
     public function deleteImageByProductId($product_id)
     {
-
         $getAllProducts = $this->getProductImageByProductId($product_id);
 
         foreach ($getAllProducts as $image) {

@@ -6,9 +6,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
-    <?php if (isset($_SESSION['success'])) : ?>
-        toastr.success("<?= $_SESSION['success'] ?>");
-    <?php endif; ?>
+    // <?php //if (isset($_SESSION['success'])) : ?>
+    //     toastr.success("<?=$_SESSION['success']?>");
+    // <?php //endif; ?>
 
     function deleteRecord(event) {
         let result = confirm('Are you sure you want to delete this record?');

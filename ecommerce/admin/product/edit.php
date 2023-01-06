@@ -1,3 +1,6 @@
+<?php require_once '../../layouts/header.php'; ?>
+<?php require_once '../../layouts/navigation.php'; ?>
+
 <?php 
     spl_autoload_register(function($class){
         require '../classes/'.$class.'.php';
@@ -42,9 +45,6 @@
     }
 
 ?>
-
-<?php require_once '../../layouts/header.php'; ?>
-<?php require_once '../../layouts/navigation.php'; ?>
 
 <div class="container mt-4 mb-2">
     <div class="row">
