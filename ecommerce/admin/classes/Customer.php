@@ -44,15 +44,18 @@ class Customer
     public function store($data)
     {
         $image_path = '';
+        $password =  password_hash($data['password'], PASSWORD_DEFAULT);
 
         if (isset($data['image']['name']) && $data['image']['name'][0] != '') {
             $image_path = $this->upload($data['image']);
         }
 
-        $statement = $this->connection->prepare('insert into customers(first_name, last_name, email, image_path) values(:first_name ,:last_name,:email,:image_path)');
+        $statement = $this->connection->prepare('insert into customers(first_name, last_name, email, image_path, password, role) values(:first_name ,:last_name,:email,:image_path, :password,:role)');
         $statement->bindParam(':first_name', $data['first_name']);
         $statement->bindParam(':last_name', $data['last_name']);
         $statement->bindParam(':email', $data['email']);
+        $statement->bindParam(':password', $password);
+        $statement->bindParam(':role', $data['role']);
         $statement->bindParam(':image_path', $image_path);
 
         $result = $statement->execute();
@@ -134,6 +137,61 @@ class Customer
         if (file_exists($path)) {
             unlink($path);
 
+            return true;
+        }
+
+        return false;
+    }
+
+    public function login($data)
+    {
+        $statement = $this->connection->prepare('select * from customers where email=:email');
+        $statement->bindParam(':email', $data['email']);
+
+        $result = $statement->execute();
+
+        if ($result) {
+            $customer =  $statement->fetch(PDO::FETCH_ASSOC);
+
+            if ($customer) {
+                $passwordVerify = password_verify($data['password'], $customer['password']);
+
+                if ($passwordVerify) {
+                    return $customer;
+                }else {
+                    return false;
+                }
+            }
+
+            return false;
+        }
+
+        return null;
+    }
+
+    public function logout()
+    {
+        
+    }
+
+    public function register($data)
+    {
+        $image_path = '';
+        $password =  password_hash($data['password'], PASSWORD_DEFAULT);
+
+        $role = 0;
+
+        $statement = $this->connection->prepare('insert into customers(first_name, last_name, email, image_path, password, role) values(:first_name ,:last_name,:email,:image_path, :password,:role)');
+        $statement->bindParam(':first_name', $data['first_name']);
+        $statement->bindParam(':last_name', $data['last_name']);
+        $statement->bindParam(':email', $data['email']);
+        $statement->bindParam(':password', $password);
+        $statement->bindParam(':role', $role);
+        $statement->bindParam(':image_path', $image_path);
+
+        $result = $statement->execute();
+
+        if ($result) {
             return true;
         }
 

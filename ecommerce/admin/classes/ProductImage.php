@@ -3,7 +3,6 @@
 
 class ProductImage
 {
-
     public $connection;
 
     public function __construct($connection)
