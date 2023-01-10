@@ -19,7 +19,6 @@ class Product
 
     public function getAllProducts()
     {
-
         $statement = $this->connection->prepare('Select * from products');
 
         $result =  $statement->execute();
@@ -128,4 +127,32 @@ class Product
             $this->productImageClass->store(['image_path' => $semi_directory, 'product_id' => $id]);
         }
     }
+
+    public function getAllProductsWithImages() {
+        $sql = "select DISTINCT products.* , product_images.image_path from products inner join product_images on product_images.product_id = products.id  GROUP BY  product_images.product_id";
+
+        $statement = $this->connection->prepare($sql);
+
+        $result =  $statement->execute();
+
+        if ($result) {
+            return $statement->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        return [];
+    }
+
+    // public function getProductByIdWithImages($id)
+    // {
+    //     $statement = $this->connection->prepare('select DISTINCT products.* , product_images.image_path from products inner join product_images on product_images.product_id = products.id where products.id=:id  GROUP BY product_images.product_id ');
+    //     $statement->bindParam(':id', $id);
+
+    //     $result = $statement->execute();
+
+    //     if ($result) {
+    //         return $statement->fetch(PDO::FETCH_ASSOC);
+    //     }
+
+    //     return null;
+    // }
 }
