@@ -55,7 +55,7 @@
             <p>
                 <?= $product['description'] ?>
             </p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="addtocart.php?id=<?=$product['id']?>" class="btn btn-primary">Add to Cart</a>
         </div>
     </div>
 </div>
