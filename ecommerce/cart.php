@@ -18,9 +18,7 @@ $productImageClass = new ProductImage($databaseClass->connect());
 
 $cartItems = $cartClass->getCartItems($cartId);
 
-
 if (isset($_POST['submit'])) {
-
 
     $data = $_POST;
 
@@ -36,8 +34,6 @@ if (isset($_POST['submit'])) {
 
     header('Location: cart.php');
 }
-
-
 
 ?>
 

@@ -1,5 +1,5 @@
-<?php require_once '../../layouts/header.php'; ?>
-<?php require_once '../../layouts/navigation.php'; ?>
+<?php require_once '../layouts/header.php'; ?>
+<?php require_once '../layouts/navigation.php'; ?>
 
 <?php 
     spl_autoload_register(function($class){

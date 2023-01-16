@@ -1,5 +1,5 @@
-<?php require_once '../../layouts/header.php'; ?>
-<?php require_once '../../layouts/navigation.php'; ?>
+<?php require_once '../layouts/header.php'; ?>
+<?php require_once '../layouts/navigation.php'; ?>
 
 <div class="container mt-2 mb-2">
     <div class="row">

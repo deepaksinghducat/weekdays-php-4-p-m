@@ -1,5 +1,11 @@
 <?php    
    session_start();
+
+   if(! isset($_SESSION['current_user'])) {
+        header('Location: ../login.php');
+   }
+
+   $user = $_SESSION['current_user'];
 ?>
 
 <!DOCTYPE html>

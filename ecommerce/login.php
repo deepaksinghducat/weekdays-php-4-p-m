@@ -19,7 +19,7 @@ if (isset($_POST['login'])) {
 
     if ($customer) {
         $_SESSION['success'] = 'Registeration successfully';
-        $_SESSION['current_customer'] = $customer;
+        $_SESSION['current_user'] = $customer;
 
         header('Location: ./admin/index.php');
     } else {
