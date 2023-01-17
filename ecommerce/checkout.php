@@ -1,6 +1,43 @@
 <?php require_once 'layouts/header.php'; ?>
 <?php require_once 'layouts/navigation.php'; ?>
 
+
+<?php
+spl_autoload_register(function ($class) {
+    require './admin/classes/' . $class . '.php';
+});
+
+$cartId = isset($_SESSION['cart_id']) ? (int)$_SESSION['cart_id'] : 0;
+
+$databaseClass = new Database();
+
+$addressClass = new Address($databaseClass->connect());
+
+
+if (isset($_POST['proceed'])) {
+
+    try {
+        $biling = $_POST['billing'];
+        $biling['type'] = 'billing';
+    
+        $addressClass->storeAddressByCartId($biling,$cartId);
+    
+        $shipping = $_POST['shipping'];
+        $shipping['type'] = 'shipping';
+    
+        $addressClass->storeAddressByCartId($shipping,$cartId);
+    
+    } catch (\Throwable $th) {
+        $_SESSION['error'] = "Something went wrong";
+        header("Location: cart.php");
+    }
+    
+
+  
+}
+
+?>
+
 <div class="container mt-4  mb-4">
     <div class="row">
         <div class="col-sm-8">
@@ -17,19 +54,19 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <label for="address" class="form-label">Address</label>
-                                        <input type="text" class="form-control" id="address" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="address" name="billing[address]">
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="city" class="form-label">city</label>
-                                        <input type="text" class="form-control" id="city" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="city" name="billing[city]">
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="state" class="form-label">state</label>
-                                        <input type="text" class="form-control" id="state" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="state" name="billing[state]">
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="country" class="form-label">country</label>
-                                        <input type="text" class="form-control" id="country" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="country" name="billing[country]">
                                     </div>
                                 </div>
                             </div>
@@ -46,26 +83,26 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <label for="address" class="form-label">Address</label>
-                                        <input type="text" class="form-control" id="address" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="address" name="shipping[address]">
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="city" class="form-label">city</label>
-                                        <input type="text" class="form-control" id="city" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="city" name="shipping[city]">
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="state" class="form-label">state</label>
-                                        <input type="text" class="form-control" id="state" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="state" name="shipping[state]">
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="country" class="form-label">country</label>
-                                        <input type="text" class="form-control" id="country" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="country" name="shipping[country]">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <button class="btn btn-primary mt-2">Proceed</button>
+                    <button name="proceed" class="btn btn-primary mt-2">Proceed</button>
                 </div>
             </form>
         </div>

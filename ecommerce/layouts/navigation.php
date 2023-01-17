@@ -1,3 +1,21 @@
+<?php
+spl_autoload_register(function ($class) {
+    require './admin/classes/' . $class . '.php';
+});
+
+$cartId = isset($_SESSION['cart_id']) ? (int)$_SESSION['cart_id'] : 0;
+
+$databaseClass = new Database();
+
+$cartClass = new Cart($databaseClass->connect());
+
+$productClass = new Product($databaseClass->connect());
+
+$productImageClass = new ProductImage($databaseClass->connect());
+
+$cartItems = $cartClass->getCartItems($cartId);
+?>
+
 <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
     <div class="container">
         <a class="navbar-brand" href="index.php">Ecommerce</a>
@@ -12,7 +30,11 @@
 
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                    <a class="nav-link" href="cart.php">Cart</a>
+                    <a class="nav-link" href="cart.php">Cart
+                        <?php if (count($cartItems) > 0) : ?>
+                            <span class="badge bg-danger"><?= count($cartItems) ?></span>
+                        <?php endif; ?>
+                    </a>
                 </li>
 
                 <li class="nav-item">

@@ -51,6 +51,14 @@ if (isset($_POST['submit'])) {
                 </tr>
             </thead>
             <tbody>
+                <?php if (count($cartItems) == 0) : ?>
+                    <tr>
+                        <td colspan="5">
+                            No Item is added to cart
+                        </td>
+                    </tr>
+                <?php endif; ?>
+
                 <?php foreach ($cartItems as $key => $item) : ?>
                     <?php
                     $product = $productClass->getProductById($item['product_id']);
@@ -77,11 +85,11 @@ if (isset($_POST['submit'])) {
             </tbody>
         </table>
 
-        <div class="d-grid gap-2">
+        <?php if (count($cartItems) != 0) : ?>
             <button class="btn btn-primary" name="submit"> Update Cart</button>
-            <button class="btn btn-primary" type="button">Continue Shopping</button>
-            <button class="btn btn-primary" type="button">Proceed To checkout</button>
-        </div>
+            <a href="index.php" class="btn btn-primary" type="button">Continue Shopping</a>
+            <a href="checkout.php" class="btn btn-primary" type="button">Proceed To checkout</a>
+        <?php endif; ?>
     </div>
 </form>
 
