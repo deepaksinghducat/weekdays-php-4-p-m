@@ -13,10 +13,17 @@ $databaseClass = new Database();
 
 $addressClass = new Address($databaseClass->connect());
 
+$orderClass = new Order($databaseClass->connect());
+
+$cartClass = new Cart($databaseClass->connect());
+
+$cart = $cartClass->getCart($cartId);
+
+$cartItems = $cartClass->getCartItems($cartId);
 
 if (isset($_POST['proceed'])) {
 
-    try {
+    // try {
         $biling = $_POST['billing'];
         $biling['type'] = 'billing';
     
@@ -26,14 +33,19 @@ if (isset($_POST['proceed'])) {
         $shipping['type'] = 'shipping';
     
         $addressClass->storeAddressByCartId($shipping,$cartId);
-    
-    } catch (\Throwable $th) {
-        $_SESSION['error'] = "Something went wrong";
-        header("Location: cart.php");
-    }
-    
 
-  
+        $cart['cart_id'] = $cart['id'];
+
+        $orderId = $orderClass->createOrder($cart);
+
+        foreach($cartItems as $cartItem) {
+            $orderClass->createOrderItem($cartItem, $orderId);
+        }
+    
+    // } catch (\Throwable $th) {
+    //     $_SESSION['error'] = "Something went wrong";
+    //     header("Location: cart.php");
+    // }
 }
 
 ?>
@@ -52,6 +64,18 @@ if (isset($_POST['proceed'])) {
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="first_name" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="first_name" name="billing[first_name]">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="last_name" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="last_name" name="billing[last_name]">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="billing[email]">
+                                    </div>
                                     <div class="col-sm-6">
                                         <label for="address" class="form-label">Address</label>
                                         <input type="text" class="form-control" id="address" name="billing[address]">
@@ -81,6 +105,18 @@ if (isset($_POST['proceed'])) {
                         <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="first_name" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="first_name" name="shipping[first_name]">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="last_name" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="last_name" name="shipping[last_name]">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="shipping[email]">
+                                    </div>
                                     <div class="col-sm-6">
                                         <label for="address" class="form-label">Address</label>
                                         <input type="text" class="form-control" id="address" name="shipping[address]">

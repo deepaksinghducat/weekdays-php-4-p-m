@@ -108,8 +108,18 @@ class Cart
         }
     }
 
-    public function getCart()
+    public function getCart($cartId)
     {
+        $statement = $this->connection->prepare('select * from carts where id=:id');
+        $statement->bindParam(':id', $cartId);
+
+        $result = $statement->execute();
+
+        if ($result) {
+            return $statement->fetch(PDO::FETCH_ASSOC);
+        }
+
+        return null;
     }
 
     public function updateItemFromCart()
