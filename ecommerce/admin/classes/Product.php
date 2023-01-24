@@ -141,18 +141,4 @@ class Product
 
         return [];
     }
-
-    // public function getProductByIdWithImages($id)
-    // {
-    //     $statement = $this->connection->prepare('select DISTINCT products.* , product_images.image_path from products inner join product_images on product_images.product_id = products.id where products.id=:id  GROUP BY product_images.product_id ');
-    //     $statement->bindParam(':id', $id);
-
-    //     $result = $statement->execute();
-
-    //     if ($result) {
-    //         return $statement->fetch(PDO::FETCH_ASSOC);
-    //     }
-
-    //     return null;
-    // }
 }

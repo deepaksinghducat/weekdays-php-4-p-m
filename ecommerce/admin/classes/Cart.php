@@ -84,6 +84,8 @@ class Cart
             $cartItemId = $cartItemExist[0]['id'];
 
             $this->updateCartItem($quantity, $cartItemId);
+
+            $this->collectTotals();
         } else {
             if ($product) {
                 $quantity = 1;
@@ -100,6 +102,7 @@ class Cart
                 $result = $statement->execute();
 
                 if ($result) {
+                    $this->collectTotals();
                     return true;
                 }
 
@@ -162,7 +165,7 @@ class Cart
 
             $grandTotal = $price + $tax;
 
-            $statement = $this->connection->prepare('update carts set  sub_total=:sub_total ,tax=:tax,grand_total=:grand_total where id =:id');
+            $statement = $this->connection->prepare('update carts set  subtotal=:sub_total ,tax=:tax,grand_total=:grand_total where id =:id');
             $statement->bindParam(':sub_total', $price);
             $statement->bindParam(':tax', $tax);
             $statement->bindParam(':grand_total', $grandTotal);

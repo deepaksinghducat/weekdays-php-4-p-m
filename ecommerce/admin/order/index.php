@@ -1,6 +1,19 @@
 <?php require_once '../layouts/header.php'; ?>
 <?php require_once '../layouts/navigation.php'; ?>
 
+
+<?php 
+    spl_autoload_register(function($class){
+        require '../classes/'.$class.'.php';
+    });
+
+    $databaseClass = new Database();
+    
+    $orderClass = new Order($databaseClass->connect());
+
+    $orders = $orderClass->getOrders();
+?>
+
 <div class="container  mb-4">
 
     <div class="row">
@@ -19,12 +32,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>#212121</td>
-                        <td>$19.25</td>
-                        <td><a href="#" class="btn btn-primary">View</a></td>
-                    </tr>
+                    <?php foreach($orders as $key => $order): ?>
+                        <tr>
+                            <th scope="row"><?=$key + 1?></th>
+                            <td>#<?=$order['id']?></td>
+                            <td>$<?=$order['sub_total']?></td>
+                            <td><a href="view.php?id=<?=$order['id']?>" class="btn btn-primary">View</a></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

@@ -15,18 +15,18 @@
                     <a class="nav-link" href="../cart.php">Cart</a>
                 </li>    
 
-                <?php if(isset($_SESSION['current_user'])): ?>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <?=$user['first_name']?>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="index.php">Profile</a></li>
-                            <li><a class="dropdown-item" href="order.php">Orders</a></li>
-                            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
-                        </ul>
-                    </li>
-                <?php endif;?>
+                    <?php if(isset($_SESSION['current_user'])): ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <?=$user['first_name']?>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="index.php">Profile</a></li>
+                                <li><a class="dropdown-item" href="order.php">Orders</a></li>
+                                <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+                    <?php endif;?>
             </ul>
         </div>
 

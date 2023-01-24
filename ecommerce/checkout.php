@@ -1,52 +1,54 @@
 <?php require_once 'layouts/header.php'; ?>
 <?php require_once 'layouts/navigation.php'; ?>
 
-
 <?php
-spl_autoload_register(function ($class) {
-    require './admin/classes/' . $class . '.php';
-});
+    spl_autoload_register(function ($class) {
+        require './admin/classes/' . $class . '.php';
+    });
 
-$cartId = isset($_SESSION['cart_id']) ? (int)$_SESSION['cart_id'] : 0;
+    $cartId = isset($_SESSION['cart_id']) ? (int)$_SESSION['cart_id'] : 0;
 
-$databaseClass = new Database();
+    $databaseClass = new Database();
 
-$addressClass = new Address($databaseClass->connect());
+    $addressClass = new Address($databaseClass->connect());
 
-$orderClass = new Order($databaseClass->connect());
+    $orderClass = new Order($databaseClass->connect());
 
-$cartClass = new Cart($databaseClass->connect());
+    $cartClass = new Cart($databaseClass->connect());
 
-$cart = $cartClass->getCart($cartId);
+    $cart = $cartClass->getCart($cartId);
 
-$cartItems = $cartClass->getCartItems($cartId);
+    $cartItems = $cartClass->getCartItems($cartId);
 
-if (isset($_POST['proceed'])) {
+    if (isset($_POST['proceed'])) {
 
-    // try {
-        $biling = $_POST['billing'];
-        $biling['type'] = 'billing';
-    
-        $addressClass->storeAddressByCartId($biling,$cartId);
-    
-        $shipping = $_POST['shipping'];
-        $shipping['type'] = 'shipping';
-    
-        $addressClass->storeAddressByCartId($shipping,$cartId);
+        try {
+            $biling = $_POST['billing'];
+            $biling['type'] = 'billing';
 
-        $cart['cart_id'] = $cart['id'];
+            $addressClass->storeAddressByCartId($biling, $cartId);
 
-        $orderId = $orderClass->createOrder($cart);
+            $shipping = $_POST['shipping'];
+            $shipping['type'] = 'shipping';
 
-        foreach($cartItems as $cartItem) {
-            $orderClass->createOrderItem($cartItem, $orderId);
+            $addressClass->storeAddressByCartId($shipping, $cartId);
+
+            $cart['cart_id'] = $cart['id'];
+
+            $orderId = $orderClass->createOrder($cart);
+
+            foreach ($cartItems as $cartItem) {
+                $orderClass->createOrderItem($cartItem, $orderId);
+            }
+
+            unset($_SESSION['cart_id']);
+
+            header('Location: thankyou.php');
+        } catch (\Throwable $th) {
+            $_SESSION['error'] = "Something went wrong";
+            header("Location: cart.php");
         }
-    
-    // } catch (\Throwable $th) {
-    //     $_SESSION['error'] = "Something went wrong";
-    //     header("Location: cart.php");
-    // }
-}
+    }
 
 ?>
 

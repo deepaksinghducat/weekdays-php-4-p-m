@@ -1,6 +1,39 @@
 <?php require_once '../layouts/header.php'; ?>
 <?php require_once '../layouts/navigation.php'; ?>
 
+
+<?php 
+    spl_autoload_register(function($class){
+        require '../classes/'.$class.'.php';
+    });
+
+    $databaseClass = new Database();
+    
+    $orderClass = new Order($databaseClass->connect());
+
+    $addressClass = new Address($databaseClass->connect());
+
+    $id = $_GET['id'];
+
+    if(! isset($id) || $id == '' ) {
+        header('Location: index.php');
+    }
+
+    $order = $orderClass->getOrdersByOrderId($id);
+
+    $billingAddress = $addressClass->getAddressByCartId($order['cart_id'], 'billing');
+
+    $shippingAddress = $addressClass->getAddressByCartId($order['cart_id'], 'shipping');
+
+    $products = $orderClass->getProductItemsByOrderItemId($order['id']);
+
+    // $images = $productImageClass->getProductImageByProductId($id);
+
+    if(! $order) {
+        header('Location: index.php');
+    }
+?>
+
 <div class="container mt-2 mb-2">
     <div class="row">
         <div class="col-sm-2">
@@ -23,7 +56,33 @@
                                     Order Created On
                                 </div>
                                 <div class="col-sm-9">
-                                    12-10-2022
+                                    <?=$order['created_at']?>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Sub Total
+                                </div>
+                                <div class="col-sm-9">
+                                    $<?=$order['sub_total']?>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                   Tax
+                                </div>
+                                <div class="col-sm-9">
+                                    $<?=$order['tax']?>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                   Grand Total
+                                </div>
+                                <div class="col-sm-9">
+                                    $<?=$order['grand_total']?>
                                 </div>
                             </div>
                         </div>
@@ -41,19 +100,19 @@
                                 <div class="col-sm-6">
                                     <ul class="list-group">
                                         <li class="list-group-item active" aria-current="true">Billing Details</li>
-                                        <li class="list-group-item">A - 43 Sector 16 </li>
-                                        <li class="list-group-item">noida</li>
-                                        <li class="list-group-item">Uttar Pardesh</li>
-                                        <li class="list-group-item">201301</li>
+                                        <li class="list-group-item"><?=$billingAddress['address']?></li>
+                                        <li class="list-group-item"><?=$billingAddress['city']?></li>
+                                        <li class="list-group-item"><?=$billingAddress['state']?></li>
+                                        <li class="list-group-item"><?=$billingAddress['country']?></li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-6">
                                     <ul class="list-group">
                                         <li class="list-group-item active" aria-current="true">Shipping Details</li>
-                                        <li class="list-group-item">A - 43 Sector 16 </li>
-                                        <li class="list-group-item">noida</li>
-                                        <li class="list-group-item">Uttar Pardesh</li>
-                                        <li class="list-group-item">201301</li>
+                                        <li class="list-group-item"><?=$shippingAddress['address']?></li>
+                                        <li class="list-group-item"><?=$shippingAddress['city']?></li>
+                                        <li class="list-group-item"><?=$shippingAddress['state']?></li>
+                                        <li class="list-group-item"><?=$shippingAddress['country']?></li>
                                     </ul>
                                 </div>
                             </div>
@@ -79,15 +138,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach($products as $key => $product): ?>
                                     <tr>
-                                        <th scope="row">1</th>
+                                        <th scope="row"><?=$key + 1?></th>
                                         <td>
-                                            <img src="https://via.placeholder.com/50/0000FF/808080?Text=Digital.com" alt="">
+                                            <img src="../<?=$product['image_path']?>" alt="" height="50">
                                         </td>
-                                        <td>Product Name</td>
-                                        <td>$19.25</td>
-                                        <td>10</td>
+                                        <td><?=$product['name']?></td>
+                                        <td>$<?=$product['price']?></td>
+                                        <td><?=$product['quantity']?></td>
                                     </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

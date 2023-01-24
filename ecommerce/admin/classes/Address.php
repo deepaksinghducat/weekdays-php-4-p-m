@@ -7,6 +7,20 @@ class Address {
         $this->connection = $connection;
     }
 
+    public function getAddressByCartId($cartId, $flag) {
+        $statement = $this->connection->prepare('select * from addresses where cart_id=:cart_id and type=:type');
+        $statement->bindParam(':cart_id', $cartId);
+        $statement->bindParam(':type', $flag);
+
+        $result = $statement->execute();
+
+        if ($result) {
+            return $statement->fetch(PDO::FETCH_ASSOC);
+        }
+
+        return null;
+    }
+
     public function storeAddressByCartId($data, $cartId) {
 
         $statement = $this->connection->prepare('insert into addresses(first_name, last_name, email, address, city, state, country, type, cart_id) values(:first_name, :last_name, :email, :address, :city, :state, :country, :type, :cart_id)');
